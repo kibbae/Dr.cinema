@@ -9,6 +9,9 @@ import {
 import cinemasjason from "../../resources/cinemas.json";
 import DropDown from "../../components/DropDown";
 
+import MovieList from "../../components/MovieList";
+import allMovies from "../../resources/movies.json";
+
 
 const Home = ({ navigation: {navigate} }) => {
   const [CinemasData, setCinemasData] = React.useState(cinemasjason); 
@@ -20,6 +23,8 @@ const Home = ({ navigation: {navigate} }) => {
        <DropDown ChosenCinemaId={ChosenCinemaId} setChosenCinemaId={setChosenCinemaId} CinemasData={CinemasData} />
         <Text>{ChosenCinemaId === 'all' ? CinemasData.map((item) => ' - ' + item.name) : CinemasData.find((item) => item.id === ChosenCinemaId).name}</Text>
         </FormControl>
+        <Text>Home</Text>
+        <MovieList MovieInfo={allMovies}/>
     </View>
   );
 };
