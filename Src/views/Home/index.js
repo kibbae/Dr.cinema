@@ -24,7 +24,7 @@ const Home = ({ navigation: {navigate} }) => {
         <Text>{ChosenCinemaId === 'all' ? CinemasData.map((item) => ' - ' + item.name) : CinemasData.find((item) => item.id === ChosenCinemaId).name}</Text>
         </FormControl>
         <Text>Home</Text>
-        <MovieList MovieInfo={allMovies}/>
+        <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={allMovies}/>
     </View>
   );
 };
