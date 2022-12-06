@@ -17,21 +17,14 @@ import {
   Box,
   NativeBaseProvider,
 } from "native-base";
-import PhoneInput from "react-native-phone-number-input";
-import { Colors } from "react-native/Libraries/NewAppScreen";
-import styles from "../../views/Contact/styles";
-import AddImage from "../../components/AddImage";
-import Contactimage from "../../components/ContactImage";
-import {useSelector, useDispatch} from "react-redux";
-import PhoneNumberInput from "../../components/PhoneNumberInput";
-import { parsePhoneNumber } from 'react-phone-number-input'
+
 
 const Home = ({ navigation: {navigate} }) => {
 
   return (
     <View>
        <FormControl mt="3">
-
+        <Text>Home</Text>
         </FormControl>
     </View>
   );
