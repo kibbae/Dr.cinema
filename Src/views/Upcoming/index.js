@@ -13,7 +13,7 @@ import MovieList from "../../components/MovieList";
 import allMovies from "../../resources/movies.json";
 
 
-const Home = ({ navigation: {navigate} }) => {
+const Upcoming = () => {
   const [CinemasData, setCinemasData] = React.useState(cinemasjason); 
   const [ChosenCinemaId, setChosenCinemaId] = React.useState('all');
   console.log('id: ',ChosenCinemaId)
@@ -23,10 +23,10 @@ const Home = ({ navigation: {navigate} }) => {
        <DropDown ChosenCinemaId={ChosenCinemaId} setChosenCinemaId={setChosenCinemaId} CinemasData={CinemasData} />
         <Text>{ChosenCinemaId === 'all' ? CinemasData.map((item) => ' - ' + item.name) : CinemasData.find((item) => item.id === ChosenCinemaId).name}</Text>
         </FormControl>
-        <Text onPress={() => navigate('AboutMovie')}>Home</Text>
-        <MovieList  ChosenCinemaId={ChosenCinemaId} MovieInfo={allMovies}/>
+        <Text>Upcoming</Text>
+        <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={allMovies}/>
     </View>
   );
 };
 
-export default Home;
+export default Upcoming;
