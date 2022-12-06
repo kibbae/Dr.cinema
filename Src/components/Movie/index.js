@@ -1,30 +1,22 @@
-import React from "react";
-import { View, Text, FlatList, Image } from "react-native";
+
+import React from 'react';
+import { View, Image, Text } from 'react-native';
 
 import styl from "./style"
 
-const MovieList = ({ MovieInfo }) => {
-    console.log(MovieInfo.title)
-    console.log(MovieInfo.year)
-    const img = MovieInfo.poster
-    console.log(MovieInfo.poster)
-    const stir = "https://kvikmyndir.is/images/poster/9650_500.jpg"
+const DisplayAnImage = ({ MovieInfo }) => {
 
-    return (
-        <View>
-            <Text>{MovieInfo.title}</Text>
-            <Text>{MovieInfo.year}</Text>
-            <Text>{img}</Text>
-            <Image
-                style={styl.imgSizer}
-                source={{
-                uri: 'https://reactnative.dev/img/tiny_logo.png',
-                }}
-            />
-            <Image style={styl.imgSizer} source={{url : "https://reactnative.dev/img/tiny_logo.png",}}/>
-            <Image source={MovieInfo.poster}/>
-        </View>
-    );
-};
+  return (
+    <View style={styl.container}>
+    <Image
+        style={styl.tinyLogo}
+        source={{ uri: MovieInfo.poster, }}
+    />
+    <Text>{MovieInfo.title}</Text>
+    <Text>{MovieInfo.year}</Text>
+    <Text>{MovieInfo.genres[0].NameEN}</Text>
+    </View>
+  );
+}
 
-export default MovieList;
+export default DisplayAnImage;
