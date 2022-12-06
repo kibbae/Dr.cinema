@@ -1,22 +1,9 @@
-import React, { useState, useRef } from "react";
-import {
-  SafeAreaView,
-  StyleSheet,
-  View,
-  StatusBar,
-  TouchableOpacity,
-  Text,
-} from "react-native";
-import {
-  Image,
-  Center,
-  Popover,
-  Button,
-  Input,
-  FormControl,
-  Box,
-  NativeBaseProvider,
-} from "native-base";
+import React from "react";
+import { View, Text, } from "react-native";
+import { FormControl, } from "native-base";
+
+import MovieList from "../../components/MovieList";
+import allMovies from "../../resources/movies.json"
 
 
 const Home = ({ navigation: {navigate} }) => {
@@ -25,6 +12,7 @@ const Home = ({ navigation: {navigate} }) => {
     <View>
        <FormControl mt="3">
         <Text>Home</Text>
+        <MovieList MovieInfo={allMovies}/>
         </FormControl>
     </View>
   );
