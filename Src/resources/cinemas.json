@@ -10,6 +10,16 @@
         "google_map": ""
     },
     {
+        "id": 7,
+        "name": "Kringlubíó",
+        "address\t": "Kringlubíó",
+        "city": "201 Kópavogur",
+        "phone": "564-0000",
+        "website": "www.Kringlubíó.is",
+        "description": "Smárabíó er eitt fullkomnasta kvikmyndahús landsins.\n\nBíóið er með 5 sali og tekur rúmlega 1.000 manns í sæti..\n\n",
+        "google_map": ""
+    },
+    {
         "id": 2,
         "name": "Háskólabíó",
         "address\t": "Hagatorgi",
