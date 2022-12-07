@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, FlatList } from "react-native";
 
-import Movie from "../Movie"
+import Movie from "../UpcomingMovie"
 
-const UpcomingMovieList = ({ MovieInfo,ChosenCinemaId }) => {
-    console.log(MovieInfo)
+const MovieList = ({ MovieInfo,ChosenCinemaId }) => {
+   // console.log(MovieInfo)
     //const strAscending = [...MovieInfo].sort((a, b) => a.name > b.name ? 1 : -1,);
 
     return (
@@ -20,4 +20,4 @@ const UpcomingMovieList = ({ MovieInfo,ChosenCinemaId }) => {
     );
 };
 
-export default UpcomingMovieList;
+export default MovieList;
