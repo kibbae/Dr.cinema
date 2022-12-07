@@ -21,15 +21,20 @@ const getSelectionFromData = (CinemaData) => {
     );
   };
 
-const DropDown = ({ ChosenCinemaId, setChosenCinemaId, CinemasData, listAllMovies, setListAllMovies }) => {
+const DropDown = ({ ChosenCinemaId, setChosenCinemaId, CinemasData, orgAllMovies, setListAllMoviesFilter, setListAllMovies }) => {
   // það þarf að refresha síðuna til að sýna allan listan aftur. 
   // þarf hjálp á morgun til að laga þetta.
   const filterByCinemaID = (cinemaID) => {
-    
-    const filterdMovies = listAllMovies.filter(movie => 
-      movie.showtimes.some(cinemas => cinemas.cinema.id === cinemaID)
-      );
-    setListAllMovies(filterdMovies);
+    if (cinemaID !== 'all') {
+      const filterdMovies = orgAllMovies.filter(movie => 
+        movie.showtimes.some(cinemas => cinemas.cinema.id === cinemaID)
+        );
+      setListAllMoviesFilter(filterdMovies)
+      setListAllMovies(filterdMovies);
+    } else {
+      setListAllMoviesFilter(orgAllMovies)
+      setListAllMovies(orgAllMovies);
+    }
   }
 
   
