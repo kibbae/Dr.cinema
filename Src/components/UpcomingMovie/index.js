@@ -17,7 +17,7 @@ const UpcomingMovie = ({ MovieInfo }) => {
     console.log(MovieInfo["release-dateIS"] < newdate)
     const { navigate } = useNavigation();
     
-    if (MovieInfo["release-dateIS"] > newdate) {
+    if (MovieInfo["release-dateIS"] < newdate) {
    // console.log(newdate, 'dagurinn í dag nýtt format')
     console.log(MovieInfo["release-dateIS"], 'dagur í mynd')
      console.log(MovieInfo["release-dateIS"] > date)
