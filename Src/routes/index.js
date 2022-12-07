@@ -1,9 +1,11 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, AntDesign } from '@expo/vector-icons';
 
 import Home from "../views/Home"
 import AboutMovie from "../views/AboutMovie"
+import Upcoming from "../views/Upcoming"
+
 
 const Tap = createBottomTabNavigator();
 const AuthStack = createStackNavigator();
@@ -26,6 +28,8 @@ const Taps = () => {
                     let iconName
                     if (route.name === 'Home') {
                         iconName = focused ? 'ios-home' : 'ios-home-outline';
+                    } else if (route.name === 'Upcoming') {
+                        iconName = focused ? 'exclamationcircle' : 'exclamationcircleo';
                     }
                     return <Ionicons name={iconName} size={24} color="white" />
                 },
@@ -42,6 +46,7 @@ const Taps = () => {
           })
         }>
             <Tap.Screen name="Home" component={HomeStackScreen} />
+            <Tap.Screen name="Upcoming" component={Upcoming}  /> 
         </Tap.Navigator>
     );
 };
