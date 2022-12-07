@@ -44,20 +44,6 @@ const Home = () => {
         <MovieSearch listAllMovies={listAllMovies} setListAllMovies={setListAllMovies} orgAllMovies={listAllMoviesFilter}/>
         <Text>Home</Text>
         <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={listAllMovies}/>
-      <View style={styles.menuBar}>
-        <TouchableOpacity style={styles.menuBarIcons} onPress={() => navigate('Home')}>
-            {/* <Ionicons name="person-circle" size={30} color="black" /> */}
-            <Text>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuBarIcons} onPress={() => navigate('Upcoming')}>
-            {/* <Ionicons name="add-circle" size={30} color="black" /> */}
-            <Text>Upcoming</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuBarIcons} onPress={() => navigate('')}>
-            {/* <Ionicons name="add-circle" size={30} color="black" /> */}
-            <Text>About </Text>
-        </TouchableOpacity>
-    </View>
     </SafeAreaView>
   );
 };
