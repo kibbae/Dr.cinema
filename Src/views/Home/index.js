@@ -2,6 +2,7 @@ import React from "react";
 import {
   View,
   Text,
+  TouchableOpacity,
 } from "react-native";
 import {
   FormControl,
@@ -11,7 +12,9 @@ import cinemasjason from "../../resources/cinemas.json";
 import DropDown from "../../components/DropDown";
 import MovieList from "../../components/MovieList";
 import allMovies from "../../resources/movies.json";
+import styles from "./styles";
 import MovieSearch from "../../components/MovieSearch";
+
 
 
 const Home = ({ navigation: {navigate} }) => {
@@ -25,6 +28,7 @@ const Home = ({ navigation: {navigate} }) => {
 
 
   return (
+    <View>
     <View>
        <FormControl mt="3">
        <DropDown 
@@ -41,6 +45,21 @@ const Home = ({ navigation: {navigate} }) => {
         <Text>Home</Text>
         <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={listAllMovies}/>
     </View>
+      <View style={styles.menuBar}>
+                <TouchableOpacity style={styles.menuBarIcons} onPress={() => navigate('Home')}>
+                    {/* <Ionicons name="person-circle" size={30} color="black" /> */}
+                    <Text>Home</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.menuBarIcons} onPress={() => navigate('Upcoming')}>
+                    {/* <Ionicons name="add-circle" size={30} color="black" /> */}
+                    <Text>Upcoming</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.menuBarIcons} onPress={() => navigate('')}>
+                    {/* <Ionicons name="add-circle" size={30} color="black" /> */}
+                    <Text>About </Text>
+                </TouchableOpacity>
+            </View>
+        </View>
   );
 };
 
