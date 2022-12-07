@@ -1,7 +1,7 @@
 [
 {
     "_id": "572a43828d67709c36abc640",
-    "id": 9650,
+    "id": 1,
     "ids": {
       "imdb": "3498820",
       "rotten": null,
@@ -53,7 +53,7 @@
     "showtimes": [
       {
         "cinema": {
-          "id": 4,
+          "id": 2,
           "name": "Laugarásbíó"
         },
         "schedule": [
@@ -307,15 +307,18 @@
     ],
     "plot": "Vegna misheppnaðra aðgerða sem kostað hafa mannslíf hefur\nstjórnin ákveðið að hér eftir þurfi Avengers-hópurinn og aðrir\nmeð ofurkrafta að fylgja ströngum reglum. Við þetta vill Steve\nRogers ekki sætta sig þvert á vilja Tonys Stark og smám saman\nmagnast deilan uns á brestur bardagi sem á eftir að taka sinn toll."
   },
+
+
+  
   {
     "_id": "572a43828d67709c36abc640",
-    "id": 9650,
+    "id": 2,
     "ids": {
       "imdb": "3498820",
       "rotten": null,
       "tmdb": null
     },
-    "title": "Captain America: Civil War",
+    "title": "Christmas Vacation",
     "alternativeTitles": "",
     "year": "2016",
     "durationMinutes": 146,
@@ -336,7 +339,7 @@
         "NameEN\t": "Sci-Fi"
       }
     ],
-    "poster": "https://kvikmyndir.is/images/poster/9650_500.jpg",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMGZkMWQ2MzMtYTkxYS00OThmLWI0ZTQtNmY0ZTkyY2E4MjliXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
     "actors_abridged": [
       {
         "name": "Chris Evans"
@@ -615,15 +618,18 @@
     ],
     "plot": "Vegna misheppnaðra aðgerða sem kostað hafa mannslíf hefur\nstjórnin ákveðið að hér eftir þurfi Avengers-hópurinn og aðrir\nmeð ofurkrafta að fylgja ströngum reglum. Við þetta vill Steve\nRogers ekki sætta sig þvert á vilja Tonys Stark og smám saman\nmagnast deilan uns á brestur bardagi sem á eftir að taka sinn toll."
   },
+
+
+
   {
     "_id": "572a43828d67709c36abc640",
-    "id": 9650,
+    "id": 3,
     "ids": {
       "imdb": "3498820",
       "rotten": null,
       "tmdb": null
     },
-    "title": "Captain America: Civil War",
+    "title": "Dune",
     "alternativeTitles": "",
     "year": "2016",
     "durationMinutes": 146,
@@ -644,7 +650,7 @@
         "NameEN\t": "Sci-Fi"
       }
     ],
-    "poster": "https://kvikmyndir.is/images/poster/9650_500.jpg",
+    "poster": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2a5bb2105168471.5f733bb4cec20.jpg",
     "actors_abridged": [
       {
         "name": "Chris Evans"
