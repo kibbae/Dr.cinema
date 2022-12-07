@@ -10,7 +10,7 @@ const DisplayAnImage = ({ MovieInfo }) => {
   return (
     <View style={styl.container}>
     <TouchableOpacity onPress={() => navigate('AboutMovie', {info: MovieInfo})}>
-        {/* The Poster Img */}
+    {/* The Poster Img */}
         <View>
             <Image style={styl.tinyLogo} source={{ uri: MovieInfo.poster, }} />
         </View>

@@ -21,13 +21,24 @@ const getSelectionFromData = (CinemaData) => {
     );
   };
 
-const DropDown = ({ChosenCinemaId,setChosenCinemaId,CinemasData}) => {
+const DropDown = ({ ChosenCinemaId, setChosenCinemaId, CinemasData, listAllMovies, setListAllMovies }) => {
+  // það þarf að refresha síðuna til að sýna allan listan aftur. 
+  // þarf hjálp á morgun til að laga þetta.
+  const filterByCinemaID = (cinemaID) => {
+    
+    const filterdMovies = listAllMovies.filter(movie => 
+      movie.showtimes.some(cinemas => cinemas.cinema.id === cinemaID)
+      );
+    setListAllMovies(filterdMovies);
+  }
+
+  
     return <Center>
         <Box maxW="300">
           <Select selectedValue={ChosenCinemaId} minWidth="200" accessibilityLabel="Choose Service" placeholder="Choose Service" _selectedItem={{
           bg: "teal.600",
           endIcon: <CheckIcon size="5" />
-        }} mt={1} onValueChange={itemValue =>setChosenCinemaId(itemValue)}>
+        }} mt={1} onValueChange={(itemValue) => {setChosenCinemaId(itemValue), filterByCinemaID(itemValue)}}>
             {getSelectionFromData(CinemasData).map((item) => (
               <Select.Item label={item.display_list_name} value={item.id} />
             ))}

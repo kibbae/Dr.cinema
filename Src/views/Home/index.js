@@ -16,15 +16,24 @@ import allMovies from "../../resources/movies.json";
 const Home = ({ navigation: {navigate} }) => {
   const [CinemasData, setCinemasData] = React.useState(cinemasjason); 
   const [ChosenCinemaId, setChosenCinemaId] = React.useState('all');
-  console.log('id: ',ChosenCinemaId)
+
+  // data = [this.state.contactsInfo]
+  const [listAllMovies, setListAllMovies] = React.useState(allMovies);
+
   return (
     <View>
        <FormControl mt="3">
-       <DropDown ChosenCinemaId={ChosenCinemaId} setChosenCinemaId={setChosenCinemaId} CinemasData={CinemasData} />
+       <DropDown 
+       ChosenCinemaId={ChosenCinemaId} 
+       setChosenCinemaId={setChosenCinemaId} 
+       CinemasData={CinemasData} 
+       listAllMovies={allMovies}
+       setListAllMovies={setListAllMovies}
+       />
         <Text>{ChosenCinemaId === 'all' ? CinemasData.map((item) => ' - ' + item.name) : CinemasData.find((item) => item.id === ChosenCinemaId).name}</Text>
         </FormControl>
         <Text>Home</Text>
-        <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={allMovies}/>
+        <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={listAllMovies}/>
     </View>
   );
 };
