@@ -1,11 +1,17 @@
 import React from "react";
-import AppContainer from "./Src/routes"
+import { NavigationContainer } from "@react-navigation/native";
 import { NativeBaseProvider } from 'native-base';
 
-export default function App() {
+import Taps from "./Src/routes";
+
+const App = () => {
   return (
     <NativeBaseProvider>
-      <AppContainer/>
+      <NavigationContainer>
+        <Taps />
+      </NavigationContainer>
     </NativeBaseProvider>
   );
 }
+
+export default App;

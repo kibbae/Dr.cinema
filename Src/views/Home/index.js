@@ -2,6 +2,7 @@ import React from "react";
 import {
   View,
   Text,
+  SafeAreaView
 } from "react-native";
 import {
   FormControl,
@@ -14,7 +15,8 @@ import allMovies from "../../resources/movies.json";
 import MovieSearch from "../../components/MovieSearch";
 
 
-const Home = ({ navigation: {navigate} }) => {
+const Home = () => {
+  console.log('Siggi this is working')
   const [CinemasData, setCinemasData] = React.useState(cinemasjason); 
   const [ChosenCinemaId, setChosenCinemaId] = React.useState('all');
 
@@ -25,7 +27,7 @@ const Home = ({ navigation: {navigate} }) => {
 
 
   return (
-    <View>
+    <SafeAreaView>
        <FormControl mt="3">
        <DropDown 
        ChosenCinemaId={ChosenCinemaId} 
@@ -40,7 +42,7 @@ const Home = ({ navigation: {navigate} }) => {
         <MovieSearch listAllMovies={listAllMovies} setListAllMovies={setListAllMovies} orgAllMovies={listAllMoviesFilter}/>
         <Text>Home</Text>
         <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={listAllMovies}/>
-    </View>
+    </SafeAreaView>
   );
 };
 
