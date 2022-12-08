@@ -41,7 +41,7 @@ const Home = () => {
 
 
   return (
-    <SafeAreaView >
+    <SafeAreaView style={{ flex:0, backgroundColor: '#263238' }}>
        <FormControl mt="3" >
        <DropDown 
        ChosenCinemaId={ChosenCinemaId} 
@@ -51,10 +51,9 @@ const Home = () => {
        setListAllMoviesFilter={setListAllMoviesFilter}
        setListAllMovies={setListAllMovies}
        />
-        <Text>{ChosenCinemaId === 'all' ? CinemasData.map((item) => ' - ' + item.name) : CinemasData.find((item) => item.id === ChosenCinemaId).name}</Text>
+        <Text style={styles.cinematext} >{ChosenCinemaId === 'all' ? CinemasData.map((item) => ' - ' + item.name) : CinemasData.find((item) => item.id === ChosenCinemaId).name}</Text>
         </FormControl>
         <MovieSearch listAllMovies={listAllMovies} setListAllMovies={setListAllMovies} orgAllMovies={listAllMoviesFilter}/>
-        <Text styles={styles.conteiner} >Home</Text>
         <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={listAllMovies} />
     </SafeAreaView>
 
