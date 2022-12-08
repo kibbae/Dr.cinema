@@ -18,7 +18,7 @@ import styles from "./styles";
 
 
 const Upcoming = ({ navigation: {navigate} }) => {
-   console.log(upcoming[2].title)
+  // console.log(upcoming[2].title)
 
   return (
     <View>

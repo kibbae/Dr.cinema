@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons, AntDesign } from '@expo/vector-icons';
 
+import LoadPage from "../views/LoadPage"
 import Home from "../views/Home"
 import AboutMovie from "../views/AboutMovie"
 import Upcoming from "../views/Upcoming"
@@ -19,6 +20,7 @@ function HomeStackScreen() {
       </HomeStack.Navigator>
      );
    }
+
 
 const Taps = () => {
     return(
@@ -50,5 +52,6 @@ const Taps = () => {
         </Tap.Navigator>
     );
 };
+
 
 export default Taps;

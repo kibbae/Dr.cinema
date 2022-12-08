@@ -12,17 +12,17 @@ const UpcomingMovie = ({ MovieInfo }) => {
    // console.log(newdate)
     const date = new Date() 
     let newdate = date.getFullYear() +'-'+ parseInt(date.getMonth() +1) +'-'+ date.getDate()
-    console.log(newdate, 'dagurinn í dag nýtt format')
-    console.log(MovieInfo)
-    console.log(MovieInfo["release-dateIS"] < newdate)
+    // console.log(newdate, 'dagurinn í dag nýtt format')
+    // console.log(MovieInfo)
+    // console.log(MovieInfo["release-dateIS"] < newdate)
     const { navigate } = useNavigation();
     
-    if (MovieInfo["release-dateIS"] < newdate) {
+    // if (MovieInfo["release-dateIS"] < newdate) {
    // console.log(newdate, 'dagurinn í dag nýtt format')
-    console.log(MovieInfo["release-dateIS"], 'dagur í mynd')
-     console.log(MovieInfo["release-dateIS"] > date)
-    console.log(MovieInfo.title, 'myndin er')
-    console.log('-----------------') 
+    // console.log(MovieInfo["release-dateIS"], 'dagur í mynd')
+    //  console.log(MovieInfo["release-dateIS"] > date)
+    // console.log(MovieInfo.title, 'myndin er')
+    // console.log('-----------------') 
 
 
         return (
@@ -42,6 +42,6 @@ const UpcomingMovie = ({ MovieInfo }) => {
             </View>
         );
         }
-    } 
+    // } 
 
 export default UpcomingMovie;

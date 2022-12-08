@@ -3,9 +3,10 @@ import { SafeAreaView, Text, FlatList } from "react-native";
 
 import Movie from "../UpcomingMovie"
 
-const MovieList = ({ MovieInfo,ChosenCinemaId }) => {
+const UpcomingMovieList = ({ MovieInfo,ChosenCinemaId }) => {
    // console.log(MovieInfo)
-    //const strAscending = [...MovieInfo].sort((a, b) => a.name > b.name ? 1 : -1,);
+    MovieInfo.sort((a,b) => a["release-dateIS"].localeCompare(b["release-dateIS"]))
+
 
     return (
         <SafeAreaView>
@@ -20,4 +21,4 @@ const MovieList = ({ MovieInfo,ChosenCinemaId }) => {
     );
 };
 
-export default MovieList;
+export default UpcomingMovieList;
