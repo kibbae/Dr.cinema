@@ -27,8 +27,7 @@ const Home = () => {
   const notFixallMovies = data['Movies']
   const allMovies = notFixallMovies.Data
   console.log('shittt ', allMovies)
-
-  const [CinemasData, setCinemasData] = React.useState(cinemasjason); 
+  const [CinemasData, setCinemasData] = React.useState(data["Cinemas"].Data); 
   const [ChosenCinemaId, setChosenCinemaId] = React.useState('all');
 
   // for Filter by cinemas
@@ -48,7 +47,6 @@ const Home = () => {
        setChosenCinemaId={setChosenCinemaId} 
        CinemasData={CinemasData} 
        orgAllMovies={allMovies}
-       //awsome
        setListAllMoviesFilter={setListAllMoviesFilter}
        setListAllMovies={setListAllMovies}
        />

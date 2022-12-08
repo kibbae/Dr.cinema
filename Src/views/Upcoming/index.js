@@ -43,7 +43,6 @@ const Upcoming = ({ navigation: {navigate} }) => {
                 <TouchableOpacity style={styles.menuBarIcons} onPress={() => navigate('')}>
                     {/* <Ionicons name="add-circle" size={30} color="black" /> */}
                     <Text>About </Text>
-                    //awsome
                 </TouchableOpacity>
             </View>
         </View>

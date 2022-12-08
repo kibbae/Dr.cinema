@@ -17,6 +17,8 @@ const LoadPage = () => {
         if (AllDataLoaded.loaded === true) 
         {
             //wait for half a second
+            // wait for 1 milisecond
+
             setTimeout(() => {
                 navigate("Home");
             }, 5000);  

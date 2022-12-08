@@ -28,7 +28,6 @@ const AboutMovie = ({ route, navigation }) => {
     } else {
         var theGenra = genres[0].NameEN
     }
-    //awsome
 
     const IfTherIsRating = () => {
         return (

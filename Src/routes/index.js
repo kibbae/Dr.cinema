@@ -7,13 +7,12 @@ import Home from "../views/Home"
 import AboutMovie from "../views/AboutMovie"
 import Upcoming from "../views/Upcoming"
 import AboutUpcomingMovie from "../views/AboutUpcomingMovie"
-
+import AboutCinema from "../views/AboutCinema"
 
 const Tap = createBottomTabNavigator();
 const AuthStack = createStackNavigator();
-//awsome
 const HomeStack = createStackNavigator();
-//awsome
+
 
 function HomeStackScreen() {
     return (
@@ -63,7 +62,6 @@ const Taps = () => {
             />
             <Tap.Screen name="Home" component={HomeStackScreen} />
             <Tap.Screen name="Upcoming" component={Upcoming}  /> 
-            //awsome
             <Tap.Screen name="AboutCinema" component={AboutCinema}  />
         </Tap.Navigator>
     );
