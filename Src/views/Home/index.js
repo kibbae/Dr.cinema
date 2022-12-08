@@ -23,17 +23,12 @@ import { fetchMovies } from "../../DataSystem/Redux/store"
 
 const Home = () => {
   const state = useSelector(state => state)
-<<<<<<< HEAD
-  const [data, setData] = useState(state);
-  const [CinemasData, setCinemasData] = React.useState(data["Cinemas"].Data); 
-=======
   const [data, setData] = useState(state)
   const notFixallMovies = data['Movies']
   const allMovies = notFixallMovies.Data
   console.log('shittt ', allMovies)
 
   const [CinemasData, setCinemasData] = React.useState(cinemasjason); 
->>>>>>> parent of cc2dde70 (Merge branch 'AboutCinema')
   const [ChosenCinemaId, setChosenCinemaId] = React.useState('all');
 
   // for Filter by cinemas
