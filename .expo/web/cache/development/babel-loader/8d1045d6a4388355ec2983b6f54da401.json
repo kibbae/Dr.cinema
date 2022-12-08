@@ -1,0 +1,1 @@
+{"ast":null,"code":"var initialstate = {};","map":{"version":3,"names":["initialstate"],"sources":["C:/Users/egill/Desktop/HR/3.ar/1st.onn/MAPP - þróun smá forrita/Dr.cinema/Src/DataSystem/Redux/asyncActions.js"],"sourcesContent":["\r\n\r\nconst initialstate = {\r\n    \r\n\r\n}"],"mappings":"AAEA,IAAMA,YAAY,GAAG,CAGrB,CAAC"},"metadata":{},"sourceType":"script"}
