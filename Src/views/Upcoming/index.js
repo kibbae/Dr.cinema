@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   View,
   Text,
@@ -10,17 +11,20 @@ import {
 } from "native-base";
 import cinemasjason from "../../resources/cinemas.json";
 import DropDown from "../../components/DropDown";
-import upcoming from "../../resources/upcoming.json";
 import UpcomingMovieList from "../../components/UpcomingMovieList";
 import allMovies from "../../resources/movies.json";
 import styles from "./styles";
+import { useSelector } from "react-redux";
 //import UpcomingMovies from "../../DataSystem/API/API";
 
 
 
 
 const Upcoming = ({ navigation: {navigate} }) => {
-  console.log()
+  const state = useSelector(state => state)
+  const [data, setData] = useState(state)
+  const upcoming = data['Upcoming'].Data
+
 
   return (
     <View style={styles.screen}>
