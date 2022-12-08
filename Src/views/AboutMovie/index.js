@@ -15,6 +15,7 @@ const AboutMovie = ({ route, navigation }) => {
     } else {
         var theGenra = genres[0].NameEN
     }
+    //awsome
 
   return (
     <View style={styl.container}>
@@ -60,24 +61,3 @@ const AboutMovie = ({ route, navigation }) => {
 };
 
 export default AboutMovie;
-
-// {/* <Image style={styl.tinyLogo} source={{ uri: poster, }} />
-// {/* Title, Movie Info and rating */}
-//     <View>
-//     {/* The title senter */}
-//         <Text>{title}</Text>
-//     {/* In line text */}
-//         <View>
-//             <Text>{year}</Text>
-//             <Text>{theGenra}</Text>
-//             <Text>{durationMinutes}</Text>
-//         </View>
-//     {/* Star rating */}
-//         <View>
-//             <Text>{omdb[0].imdbRating}</Text>
-//         </View>
-//     </View>
-// {/* Plot */}
-//     <View>
-//         <Text>{omdb[0].Plot}</Text>
-//     </View> */}

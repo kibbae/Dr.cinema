@@ -32,8 +32,10 @@ const LoadPage = () => {
     return (
         <View backgroundColor={'#263238'} height='full' width='full'>
             <Center marginTop={'2/4'} >
+            //awsome
                 <Image size={'2xl'} source={require('../../resources/popi2.gif')} alt="Loading" />
             </Center>
+            //awsome
             <Center >
             <Image onPress={checkLoading()} size={'sm'} width='200' height='100' source={require('../../resources/loding.gif')} alt="Loading" />
             </Center>

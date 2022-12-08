@@ -42,6 +42,7 @@ const Home = () => {
        setChosenCinemaId={setChosenCinemaId} 
        CinemasData={CinemasData} 
        orgAllMovies={allMovies}
+       //awsome
        setListAllMoviesFilter={setListAllMoviesFilter}
        setListAllMovies={setListAllMovies}
        />

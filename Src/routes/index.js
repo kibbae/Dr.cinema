@@ -11,12 +11,15 @@ import AboutCinema from '../views/AboutCinema';
 
 const Tap = createBottomTabNavigator();
 const AuthStack = createStackNavigator();
+//awsome
 const HomeStack = createStackNavigator();
+//awsome
 
 function HomeStackScreen() {
     return (
       <HomeStack.Navigator>
        <HomeStack.Screen name="Home" component={Home} options={{headerShown: false,}}/> 
+       //awsome
        <HomeStack.Screen name="AboutMovie" component={AboutMovie} options={{headerShown: false,}}/>            
       </HomeStack.Navigator>
      );
@@ -35,7 +38,9 @@ const Taps = () => {
                     } else if (route.name === 'Upcoming') {
                         iconName = focused ? 'newspaper' : 'newspaper-outline';
                     }
+                    //awsome
                         else if (route.name === 'AboutCinema') {
+                            //awsome
                         iconName = focused ? 'information-circle' : 'information-circle-outline';
                     }
                     return <Ionicons name={iconName} size={24} color="white" />
@@ -60,6 +65,7 @@ const Taps = () => {
             />
             <Tap.Screen name="Home" component={HomeStackScreen} />
             <Tap.Screen name="Upcoming" component={Upcoming}  /> 
+            //awsome
             <Tap.Screen name="AboutCinema" component={AboutCinema}  />
         </Tap.Navigator>
     );
