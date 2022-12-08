@@ -86,8 +86,8 @@ const AboutCinema = () => {
   // for search
     const [listAllMovies, setListAllMovies] = React.useState(listAllMoviesFilter)
     return(
-        <NativeBaseProvider >
-        <View safeArea>
+        <NativeBaseProvider  >
+        <View safeArea style={{ flex:0, backgroundColor: '#263238' }}>
             <FormControl p={'12'}>
             <DropDown 
        ChosenCinemaId={ChosenCinemaId} 

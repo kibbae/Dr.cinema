@@ -39,16 +39,16 @@ const DropDown = ({ ChosenCinemaId, setChosenCinemaId, CinemasData, orgAllMovies
   }
 
   
-    return <Center>
+    return <Center style={{height: 55}}>
         <Box maxW="300">
           <Select selectedValue={ChosenCinemaId} minWidth="200" accessibilityLabel="Choose Service" placeholder="Choose Service" _selectedItem={{
           bg: "teal.600",
           endIcon: <CheckIcon size="5" />
-        }} mt={1} onValueChange={(itemValue) => {setChosenCinemaId(itemValue), filterByCinemaID(itemValue)}}>
+        }} mt={1} onValueChange={(itemValue) => {setChosenCinemaId(itemValue), filterByCinemaID(itemValue)}} style={{color: 'white'}}>
             {getSelectionFromData(CinemasData).map((item) => (
               <Select.Item label={item.display_list_name} value={item.id} />
             ))}
-            <Select.Item label='All Cinemas' value='all' />
+            <Select.Item label='All Cinemas' value='all'/>
           </Select>
         </Box>
       </Center>;

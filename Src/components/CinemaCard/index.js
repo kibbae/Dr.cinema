@@ -25,13 +25,12 @@ const Cinema = ({ CinemaInfo }) => {
     {/* The Movie Title and other info */}
         <View>
             <Text style={styl.moviename}>{CinemaInfo.name}</Text>
-            <Text>Full Adress: {CinemaInfo.address}</Text>
-            <Text>Phone Number: {CinemaInfo.phone}</Text>
-            <Text>Website:</Text>
-            <Text style={{color: 'blue'}} onPress={() => console.log(Linking.openURL('http://'+CinemaInfo.website))}>{CinemaInfo.website}</Text>
-            <Text>Website: {CinemaInfo.website}</Text>
-            <Text>Description:</Text>
-            <Text>{CinemaInfo.description === null ? 'No description available' : CinemaInfo.description.replace(/\\t/g, ' ').replace(/<br>/g, "\n").replace(/<b>/g, "") }</Text>
+            <Text style={styl.text}>Adress: {CinemaInfo.address}</Text>
+            <Text style={styl.phone}>Phone Number: {CinemaInfo.phone}</Text>
+            <Text style={styl.description}>{CinemaInfo.description === null ? 'No description available' : CinemaInfo.description.replace(/\\t/g, ' ').replace(/<br>/g, "\n").replace(/<b>/g, "") }</Text>
+            <TouchableOpacity style={styl.link}>
+            <Text  onPress={() => console.log(Linking.openURL('http://'+CinemaInfo.website))}>{CinemaInfo.website}</Text>
+            </TouchableOpacity>
         </View>
     </TouchableOpacity>
     </View>
