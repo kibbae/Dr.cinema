@@ -1,6 +1,8 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, ImageBackground, StatusBar, SafeAreaView } from "react-native";
+import { View, Text, Image, StyleSheet, ImageBackground, StatusBar, SafeAreaView, TouchableOpacity } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
+import { Rating } from 'react-native-ratings';
+import { Entypo } from '@expo/vector-icons';
 
 import styl from "./style"
 
@@ -27,15 +29,29 @@ const AboutMovie = ({ route, navigation }) => {
                     <Text style={styl.title}>{title}</Text>
                     <View style={styl.infoInRow}>
                         <Text style={styl.MovieInfo}>{year}</Text>
+                        <Entypo name="dot-single" size={18} color="white" />
                         <Text style={styl.MovieInfo}>{theGenra}</Text>
+                        <Entypo name="dot-single" size={18} color="white" />
                         <Text style={styl.MovieInfo}>{durationMinutes}</Text>
                     </View>
-                    <View>
-                        <Text>{omdb[0].imdbRating}</Text>
+                    <View style={styl.infoInRow}>
+                        <Rating
+                            type='custom'
+                            imageSize={20}
+                            ratingColor={'#F6C700'}
+                            tintColor={'rgba(21,21,21,1)'}
+                            startingValue={omdb[0].imdbRating/2}
+                            readonly={true}
+                            isDisabled={true}
+                        />
+                        <Image style={styl.IMDB} source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png', }}/>
                     </View>
-                    <View>
-                        <Text style={styl.MovieInfo}>{omdb[0].Plot}</Text>
-                    </View> 
+                    <Text style={[styl.MovieInfo, styl.plot]}>{omdb[0].Plot}</Text>
+                    <View style={styl.coverButton}>
+                        <TouchableOpacity style={styl.GetTicketButton}>
+                            <Text>Get Ticket</Text>
+                        </TouchableOpacity>
+                    </View>
                 </SafeAreaView>
             </LinearGradient>
         </ImageBackground>

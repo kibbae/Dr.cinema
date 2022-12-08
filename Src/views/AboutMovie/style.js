@@ -28,16 +28,44 @@ const styles = StyleSheet.create({
     fontSize: 27,
     fontWeight: 'bold',
     color: 'white',
-    paddingTop: 42,
+    paddingTop: 25,
   },
   infoInRow: {
-    paddingTop: 19,
+    paddingTop: 10,
     flexDirection: 'row'
+  },
+  IMDB: {
+    marginLeft: 5,
+    height: 20,
+    width: 45.33,
   },
   MovieInfo: {
     fontSize: 15,
     color: '#B3B3B3',
-
+  },
+  TheDot: {
+    fontSize: 20,
+    color: '#FFFFFF',
+  },
+  plot: {
+    paddingTop: 30,
+    textAlign: 'center',
+  },
+  coverButton: {
+    position: 'absolute',
+    alignItems: 'center',
+    paddingTop: 40,
+    top: '90%',
+    height: '100%',
+    width: '100%',
+  },
+  GetTicketButton: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 15,
+    backgroundColor: '#F6C700',
+    width: 200,
+    height: 50,
   },
 });
 
