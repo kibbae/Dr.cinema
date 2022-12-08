@@ -22,9 +22,9 @@ import { fetchMovies } from "../../DataSystem/Redux/store"
 
 
 const Home = () => {
-  console.log("the data")
-  console.log(fetchMovies)
-  const [CinemasData, setCinemasData] = React.useState(cinemasjason); 
+  const state = useSelector(state => state)
+  const [data, setData] = useState(state)
+  const [CinemasData, setCinemasData] = React.useState(data["Cinemas"].Data); 
   const [ChosenCinemaId, setChosenCinemaId] = React.useState('all');
 
   // for Filter by cinemas
