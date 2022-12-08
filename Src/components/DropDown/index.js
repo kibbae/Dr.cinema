@@ -6,6 +6,7 @@ import {
   } from "native-base";
 
 const getSelectionFromData = (CinemaData) => {
+    CinemaData.sort((a,b) => a.name.localeCompare(b.name))
     return CinemaData.map((item) => { 
       const Final = {
         id: item.id,
@@ -14,7 +15,7 @@ const getSelectionFromData = (CinemaData) => {
         phone: item.phone,
         website: item.website,
         description: item.description,
-        display_list_name: item.name + " | " + item.website.slice(4),
+        display_list_name: item.name + " | " + item.website,
       };
       return Final;
     }
