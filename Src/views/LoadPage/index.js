@@ -3,21 +3,24 @@ import { View, Text, Button } from "native-base";
 import { useSelector, useDispatch } from "react-redux";
 import store from "../../DataSystem/Redux/store";
 import { useNavigation } from "@react-navigation/native";
+import { SafeAreaView } from "react-native";
 
 
 
 const LoadPage = () => {
     
     const AllDataLoaded = useSelector(state => state.AllDataLoaded);
+    const allMovies = useSelector(state => state.fetchMovies);
     const { navigate } = useNavigation();
 
     const checkLoading = () => {
+        console.log(allMovies)
         if (AllDataLoaded.loaded === true) 
         {
             //wait for half a second
             setTimeout(() => {
                 navigate("Home");
-            }, 500);  
+            }, 5000);  
         }
 
     }
@@ -25,11 +28,11 @@ const LoadPage = () => {
     //checkLoading();
 
     return (
-        <View>
+        <SafeAreaView>
         <Text>LoadPage</Text>
         <Text>{AllDataLoaded.loaded}</Text>
         <Button title="Test" onPress={checkLoading()}/>
-        </View>
+        </SafeAreaView>
     )
 
         

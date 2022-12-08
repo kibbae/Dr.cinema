@@ -25,6 +25,7 @@ function HomeStackScreen() {
 const Taps = () => {
     return(
         <Tap.Navigator 
+            initialRouteName="LoadPage"
             screenOptions={({route}) => ({
                 tabBarIcon: ({focused, size, color}) => {
                     let iconName
@@ -47,6 +48,12 @@ const Taps = () => {
             tabBarShowLabel: false
           })
         }>
+            <Tap.Screen name="LoadPage" component={LoadPage} 
+                options={{
+                    tabBarButton: () => null,
+                    tabBarVisible:false //hide tab bar on this screen
+                }}
+            />
             <Tap.Screen name="Home" component={HomeStackScreen} />
             <Tap.Screen name="Upcoming" component={Upcoming}  /> 
         </Tap.Navigator>
