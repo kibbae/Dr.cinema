@@ -6,7 +6,7 @@ import LoadPage from "../views/LoadPage"
 import Home from "../views/Home"
 import AboutMovie from "../views/AboutMovie"
 import Upcoming from "../views/Upcoming"
-import AboutCinema from '../views/AboutCinema';
+import AboutUpcomingMovie from "../views/AboutUpcomingMovie"
 
 
 const Tap = createBottomTabNavigator();
@@ -18,9 +18,9 @@ const HomeStack = createStackNavigator();
 function HomeStackScreen() {
     return (
       <HomeStack.Navigator>
-       <HomeStack.Screen name="Home" component={Home} options={{headerShown: false,}}/> 
-       //awsome
-       <HomeStack.Screen name="AboutMovie" component={AboutMovie} options={{headerShown: false,}}/>            
+       <HomeStack.Screen name="Home" component={Home} options={{headerShown: false,}}/>      
+       <HomeStack.Screen name="AboutMovie" component={AboutMovie} options={{headerShown: false,}}/>       
+       <HomeStack.Screen name="AboutUpcomingMovie" component={AboutUpcomingMovie} options={{headerShown: false,}}/>            
       </HomeStack.Navigator>
      );
    }
@@ -38,9 +38,7 @@ const Taps = () => {
                     } else if (route.name === 'Upcoming') {
                         iconName = focused ? 'newspaper' : 'newspaper-outline';
                     }
-                    //awsome
                         else if (route.name === 'AboutCinema') {
-                            //awsome
                         iconName = focused ? 'information-circle' : 'information-circle-outline';
                     }
                     return <Ionicons name={iconName} size={24} color="white" />

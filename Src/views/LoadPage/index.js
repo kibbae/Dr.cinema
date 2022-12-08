@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button,Image , Spinner, HStack, Center, NativeBaseProvider } from "native-base";
+import { View, Text, Button, Image, Center } from "native-base";
 import { useSelector, useDispatch } from "react-redux";
 import store from "../../DataSystem/Redux/store";
 import { useNavigation } from "@react-navigation/native";
@@ -14,15 +14,12 @@ const LoadPage = () => {
     const { navigate } = useNavigation();
 
     const checkLoading = () => {
-        console.log(allMovies)
         if (AllDataLoaded.loaded === true) 
         {
             //wait for half a second
-            // wait for 1 milisecond
-
             setTimeout(() => {
                 navigate("Home");
-            }, 500);  
+            }, 5000);  
         }
 
     }
@@ -32,10 +29,8 @@ const LoadPage = () => {
     return (
         <View backgroundColor={'#263238'} height='full' width='full'>
             <Center marginTop={'2/4'} >
-            //awsome
                 <Image size={'2xl'} source={require('../../resources/popi2.gif')} alt="Loading" />
             </Center>
-            //awsome
             <Center >
             <Image onPress={checkLoading()} size={'sm'} width='200' height='100' source={require('../../resources/loding.gif')} alt="Loading" />
             </Center>

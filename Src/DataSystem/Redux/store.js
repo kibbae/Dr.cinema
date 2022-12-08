@@ -52,7 +52,7 @@ const fetchAuthFailure = error => {
         payload: error
     }
 }
-// we use this 
+
 const fetchMoviesRequest = () => {
     return {
         type: FETCH_MOVIES_REQUEST
@@ -72,7 +72,7 @@ const fetchMoviesFailure = error => {
         payload: error
     }
 }
-// we use this 
+
 const fetchCinemasRequest = () => {
     return {
         type: FETCH_CINEMAS_REQUEST
@@ -92,7 +92,7 @@ const fetchCinemasFailure = error => {
         payload: error
     }
 }
-// we use this 
+
 const fetchGenresRequest = () => {
     return {
         type: FETCH_GENRES_REQUEST
@@ -447,6 +447,7 @@ async function LoadEverything() {
     store.dispatch(fetchUpcoming())
     await waitforloading()
     store.dispatch(putAllDataLoaded())
+    console.log("everything is loaded", store.getState())
 }
 
 LoadEverything()
