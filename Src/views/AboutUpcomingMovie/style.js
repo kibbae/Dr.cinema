@@ -34,6 +34,9 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     flexDirection: 'row'
   },
+  row: {
+    flexDirection: 'row'
+  },
   IMDB: {
     marginLeft: 5,
     height: 20,
