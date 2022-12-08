@@ -6,6 +6,7 @@ import LoadPage from "../views/LoadPage"
 import Home from "../views/Home"
 import AboutMovie from "../views/AboutMovie"
 import Upcoming from "../views/Upcoming"
+import AboutUpcomingMovie from "../views/AboutUpcomingMovie"
 
 
 const Tap = createBottomTabNavigator();
@@ -16,7 +17,8 @@ function HomeStackScreen() {
     return (
       <HomeStack.Navigator>
        <HomeStack.Screen name="Home" component={Home} options={{headerShown: false,}}/> 
-       <HomeStack.Screen name="AboutMovie" component={AboutMovie} options={{headerShown: false,}}/>            
+       <HomeStack.Screen name="AboutMovie" component={AboutMovie} options={{headerShown: false,}}/>       
+       <HomeStack.Screen name="AboutUpcomingMovie" component={AboutUpcomingMovie} options={{headerShown: false,}}/>            
       </HomeStack.Navigator>
      );
    }

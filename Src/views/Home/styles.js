@@ -16,8 +16,9 @@ export default StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
     }, 
-    conteiner: {
-        backgroundColor: '#263238'
-    },
+    cinematext: {
+        color: 'white',
+        fontWeight: 'bold',
+    }
 });
 
