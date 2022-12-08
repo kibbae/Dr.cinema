@@ -8,12 +8,42 @@ import styl from "./style"
 
 
 const AboutMovie = ({ route, navigation }) => {
-    const { title, year, poster, genres, durationMinutes, omdb } = route.params.info
+    const { title, year, poster, genres, durationMinutes, ratings, omdb } = route.params.info
+    console.log("AboutMovie View: this is the omdb")
+    console.log(omdb)
+    var rating
+    var plot
+    if (ratings.imdb === null) {
+        var { plot } = route.params.info
+        console.log(plot)
+        rating = false
+    } else {
+        plot = omdb[0].Plot
+        rating = ratings.imdb
+    }
+    // omdb[0].imdbRating
 
     if (genres.length > 1) {
         var theGenra = genres[0].NameEN + "/" + genres[1].NameEN
     } else {
         var theGenra = genres[0].NameEN
+    }
+
+    const IfTherIsRating = () => {
+        return (
+            <View style={styl.row}>
+                <Rating
+                    type='custom'
+                    imageSize={20}
+                    ratingColor={'#F6C700'}
+                    tintColor={'rgba(21,21,21,1)'}
+                    startingValue={rating/2}
+                    readonly={true}
+                    isDisabled={true}
+                />
+                <Image style={styl.IMDB} source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png', }}/>
+            </View>
+        )
     }
 
   return (
@@ -35,18 +65,9 @@ const AboutMovie = ({ route, navigation }) => {
                         <Text style={styl.MovieInfo}>{durationMinutes}</Text>
                     </View>
                     <View style={styl.infoInRow}>
-                        <Rating
-                            type='custom'
-                            imageSize={20}
-                            ratingColor={'#F6C700'}
-                            tintColor={'rgba(21,21,21,1)'}
-                            startingValue={omdb[0].imdbRating/2}
-                            readonly={true}
-                            isDisabled={true}
-                        />
-                        <Image style={styl.IMDB} source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png', }}/>
+                    {rating === false ? <Text style={{color: "#F6C700", fontWeight: "bold"}}>Note This Movie Hase No Rating</Text> : <IfTherIsRating /> }
                     </View>
-                    <Text style={[styl.MovieInfo, styl.plot]}>{omdb[0].Plot}</Text>
+                    <Text style={[styl.MovieInfo, styl.plot]}>{plot}</Text>
                     <View style={styl.coverButton}>
                         <TouchableOpacity style={styl.GetTicketButton}>
                             <Text>Get Ticket</Text>
