@@ -2,10 +2,6 @@ import { StyleSheet } from "react-native";
 
 
 const styles = StyleSheet.create({
-    container: {
-      margin: 10,
-      backgroundColor: "gray"
-    },
     tinyLogo: {
       width: 50,
       height: 50,
@@ -13,6 +9,9 @@ const styles = StyleSheet.create({
     logo: {
       width: 66,
       height: 58,
+    },
+    screen: {
+      backgroundColor: '#263238'
     },
   });
 

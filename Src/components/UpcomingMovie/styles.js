@@ -4,16 +4,45 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
       margin: 10,
-      backgroundColor: "gray"
+      backgroundColor: '#37474F',
+      flexDirection:'row',
+      borderRadius: 5,
+
     },
     tinyLogo: {
-      width: 50,
-      height: 50,
+      //position: 
+      width: 156,
+      height: 217,
+      left: 0,
+      top: 0,
+      borderRadius: 5,
+      
     },
     logo: {
       width: 66,
       height: 58,
     },
+    moviename: {
+      color: 'white',
+      fontSize: 20,
+      fontWeight: 'bold',
+      textAlign: 'left',
+      position: 'absolute',
+      width: 170,
+      height: 100,
+      left: 170,
+      top: -180,
+
+    },
+    coming: {
+      color: 'white',
+      fontSize: 15,
+      textAlign: 'left',
+      position: 'absolute',
+      left: 170,
+      bottom: 20,
+
+    }
   });
 
 export default styles;
