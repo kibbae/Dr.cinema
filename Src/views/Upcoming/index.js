@@ -14,14 +14,16 @@ import upcoming from "../../resources/upcoming.json";
 import UpcomingMovieList from "../../components/UpcomingMovieList";
 import allMovies from "../../resources/movies.json";
 import styles from "./styles";
+//import UpcomingMovies from "../../DataSystem/API/API";
+
 
 
 
 const Upcoming = ({ navigation: {navigate} }) => {
-  // console.log(upcoming[2].title)
+  console.log()
 
   return (
-    <View>
+    <View style={styles.screen}>
         <View>
             <UpcomingMovieList MovieInfo={upcoming}/>
         </View>

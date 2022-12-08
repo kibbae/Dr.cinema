@@ -9,7 +9,6 @@ const MovieList = ({ MovieInfo,ChosenCinemaId }) => {
 
     return (
         <View>
-            <Text>siggi</Text>
             <FlatList
                 numColumns={1}
                 data={MovieInfo}
