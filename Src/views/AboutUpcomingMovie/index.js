@@ -7,7 +7,7 @@ import { Entypo } from '@expo/vector-icons';
 import styl from "./style"
 
 
-const AboutMovie = ({ route, navigation }) => {
+const AboutUpcomingMovie = ({ route, navigation }) => {
     const { title, year, poster, genres, durationMinutes, ratings, omdb } = route.params.info
     console.log("AboutMovie View: this is the omdb")
     console.log(omdb)
@@ -68,6 +68,14 @@ const AboutMovie = ({ route, navigation }) => {
                     {rating === false ? <Text style={{color: "#F6C700", fontWeight: "bold"}}>Note This Movie Hase No Rating</Text> : <IfTherIsRating /> }
                     </View>
                     <Text style={[styl.MovieInfo, styl.plot]}>{plot}</Text>
+                    {/* <VideoPlayer 
+                    video={{uri: route.params.info['trailers'][0].results[0].url}}
+                    autoplay={false}
+                    defaultMuted={true}
+                    videoWidth={1000}
+                    videoHeight={750}
+                    thumbnail={{uri: poster}}
+                    /> */}
                     <View style={styl.coverButton}>
                         <TouchableOpacity style={styl.GetTicketButton}>
                             <Text>Get Ticket</Text>
@@ -80,5 +88,5 @@ const AboutMovie = ({ route, navigation }) => {
   );
 };
 
-export default AboutMovie;
+export default AboutUpcomingMovie;
 
