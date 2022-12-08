@@ -41,6 +41,7 @@ const Home = () => {
 
   return (
     <SafeAreaView style={{ flex:0, backgroundColor: '#263238' }}>
+      <ScrollView>
        <FormControl mt="3" >
        <DropDown 
        ChosenCinemaId={ChosenCinemaId} 
@@ -50,10 +51,11 @@ const Home = () => {
        setListAllMoviesFilter={setListAllMoviesFilter}
        setListAllMovies={setListAllMovies}
        />
-        <Text style={styles.cinematext} >{ChosenCinemaId === 'all' ? CinemasData.map((item) => ' - ' + item.name) : CinemasData.find((item) => item.id === ChosenCinemaId).name}</Text>
+        {/* <Text style={styles.cinematext} >{ChosenCinemaId === 'all' ? CinemasData.map((item) => ' - ' + item.name) : CinemasData.find((item) => item.id === ChosenCinemaId).name}</Text> */}
         </FormControl>
         <MovieSearch listAllMovies={listAllMovies} setListAllMovies={setListAllMovies} orgAllMovies={listAllMoviesFilter}/>
         <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={listAllMovies} />
+        </ScrollView>
     </SafeAreaView>
 
   );

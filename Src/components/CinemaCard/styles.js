@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
 
     },
     tinyLogo: {
-      //position: 
       width: 156,
       height: 217,
       left: 0,
@@ -29,29 +28,44 @@ const styles = StyleSheet.create({
       textAlign: 'left',
       position: 'absolute',
       width: 170,
-      height: 100,
       left: 170,
       top: -180,
 
     },
-    genres: {
+    text: {
       color: 'white',
-      fontSize: 15,
-      textAlign: 'left',
-      position: 'absolute',
+      fontSize: 16,
+      width: 170,
+      top: -155,
       left: 170,
-      bottom: 20,
+
 
     },
-    year: {
+    phone: {
       color: 'white',
-      fontSize: 15,
-      textAlign: 'left',
-      position: 'absolute',
+      fontSize: 16,
+      width: 170,
+      top: -152,
       left: 170,
-      bottom: 40,
 
     },
+    description : {
+      color: 'white',
+      fontSize: 16,
+      top: -60,
+
+    },
+    link: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 15,
+      backgroundColor: '#F6C700',
+      width: 300,
+      height: 50,
+      top: -50,
+      left: 50,
+    },
+
 
   });
 
