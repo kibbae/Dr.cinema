@@ -21,7 +21,7 @@ const LoadPage = () => {
 
             setTimeout(() => {
                 navigate("Home");
-            }, 500);  
+            }, 5000);  
         }
 
     }

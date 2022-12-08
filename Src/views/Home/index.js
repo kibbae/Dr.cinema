@@ -23,7 +23,7 @@ import { fetchMovies } from "../../DataSystem/Redux/store"
 
 const Home = () => {
   const state = useSelector(state => state)
-  const [data, setData] = useState(state)
+  const [data, setData] = useState(state);
   const [CinemasData, setCinemasData] = React.useState(data["Cinemas"].Data); 
   const [ChosenCinemaId, setChosenCinemaId] = React.useState('all');
 
