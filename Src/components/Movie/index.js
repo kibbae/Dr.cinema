@@ -18,9 +18,9 @@ const DisplayAnImage = ({ MovieInfo }) => {
         </View>
     {/* The Movie Title and other info */}
         <View>
-            <Text>{MovieInfo.title}</Text>
-            <Text>{MovieInfo.year}</Text>
-            <Text>{MovieInfo.genres[0].NameEN}</Text>
+            <Text style={styl.moviename}>{MovieInfo.title}</Text>
+            <Text style={styl.year}>{MovieInfo.year}</Text>
+            <Text style={styl.genres}>{MovieInfo.genres[0].NameEN}</Text>
         </View>
     </TouchableOpacity>
     </View>

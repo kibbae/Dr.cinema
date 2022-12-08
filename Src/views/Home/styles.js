@@ -15,6 +15,9 @@ export default StyleSheet.create({
     menuBarIcons: {
         flexDirection: 'column',
         alignItems: 'center',
-    }
+    }, 
+    conteiner: {
+        backgroundColor: '#263238'
+    },
 });
 
