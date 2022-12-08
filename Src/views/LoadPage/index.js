@@ -14,13 +14,12 @@ const LoadPage = () => {
     const { navigate } = useNavigation();
 
     const checkLoading = () => {
-        console.log(allMovies)
         if (AllDataLoaded.loaded === true) 
         {
             //wait for half a second
             setTimeout(() => {
                 navigate("Home");
-            }, 5000);  
+            }, 500);  
         }
 
     }

@@ -4,6 +4,7 @@ import {
   Text,
   SafeAreaView,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import {
   FormControl,
@@ -13,7 +14,6 @@ import { useSelector, useDispatch } from "react-redux"
 import cinemasjason from "../../resources/cinemas.json";
 import DropDown from "../../components/DropDown";
 import MovieList from "../../components/MovieList";
-import allMovies from "../../resources/movies.json";
 import styles from "./styles";
 import MovieSearch from "../../components/MovieSearch";
 import LoadPage from "../LoadPage";
@@ -22,8 +22,12 @@ import { fetchMovies } from "../../DataSystem/Redux/store"
 
 
 const Home = () => {
-  console.log("the data")
-  console.log(fetchMovies)
+  const state = useSelector(state => state)
+  const [data, setData] = useState(state)
+  const notFixallMovies = data['Movies']
+  const allMovies = notFixallMovies.Data
+  console.log('shittt ', allMovies)
+
   const [CinemasData, setCinemasData] = React.useState(cinemasjason); 
   const [ChosenCinemaId, setChosenCinemaId] = React.useState('all');
 
@@ -31,6 +35,8 @@ const Home = () => {
   const [listAllMoviesFilter, setListAllMoviesFilter] = React.useState(allMovies);
   // for search
   const [listAllMovies, setListAllMovies] = React.useState(listAllMoviesFilter)
+  console.log("this is the world")
+  console.log(listAllMovies)
 
 
 
@@ -49,7 +55,9 @@ const Home = () => {
         </FormControl>
         <MovieSearch listAllMovies={listAllMovies} setListAllMovies={setListAllMovies} orgAllMovies={listAllMoviesFilter}/>
         <Text>Home</Text>
-        <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={listAllMovies}/>
+        <ScrollView>
+          <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={listAllMovies}/>
+        </ScrollView>
     </SafeAreaView>
   );
 };
