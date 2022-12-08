@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
 
+import LoadPage from "../views/LoadPage"
 import Home from "../views/Home"
 // import AboutCinema from "../views/AboutCinema"
 // import AboutMovie from "../views/AboutMovie"
@@ -11,7 +12,8 @@ import Home from "../views/Home"
 
 const Routes = () => (
     <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="LoadPage">
+            <Stack.Screen name="LoadPage" component={LoadPage} />
             <Stack.Screen name="Home" component={Home}  />
             {/* <Stack.Screen name="AboutCinema" component={AboutCinema}  />
             <Stack.Screen name="AboutMovie" component={AboutMovie}  />
