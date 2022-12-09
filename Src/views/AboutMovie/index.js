@@ -9,13 +9,13 @@ import styl from "./style"
 
 const AboutMovie = ({ route, navigation }) => {
     const { title, year, poster, genres, durationMinutes, ratings, omdb } = route.params.info
-    console.log("AboutMovie View: this is the omdb")
-    console.log(omdb)
+    //console.log("AboutMovie View: this is the omdb")
+    //console.log(omdb)
     var rating
     var plot
     if (ratings.imdb === null) {
         var { plot } = route.params.info
-        console.log(plot)
+        //console.log(plot)
         rating = false
     } else {
         plot = omdb[0].Plot

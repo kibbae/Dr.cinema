@@ -26,7 +26,7 @@ const Home = () => {
   const [data, setData] = useState(state)
   const notFixallMovies = data['Movies']
   const allMovies = notFixallMovies.Data
-  console.log('shittt ', allMovies)
+  //console.log('shittt ', allMovies)
   const [CinemasData, setCinemasData] = React.useState(data["Cinemas"].Data); 
   const [ChosenCinemaId, setChosenCinemaId] = React.useState('all');
 
@@ -34,14 +34,14 @@ const Home = () => {
   const [listAllMoviesFilter, setListAllMoviesFilter] = React.useState(allMovies);
   // for search
   const [listAllMovies, setListAllMovies] = React.useState(listAllMoviesFilter)
-  console.log("this is the world")
-  console.log(listAllMovies)
+  //console.log("this is the world")
+  //console.log(listAllMovies)
 
 
 
   return (
     <SafeAreaView style={{ flex:0, backgroundColor: '#263238' }}>
-      <ScrollView>
+      
        <FormControl mt="3" >
        <DropDown 
        ChosenCinemaId={ChosenCinemaId} 
@@ -55,7 +55,6 @@ const Home = () => {
         </FormControl>
         <MovieSearch listAllMovies={listAllMovies} setListAllMovies={setListAllMovies} orgAllMovies={listAllMoviesFilter}/>
         <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={listAllMovies} />
-        </ScrollView>
     </SafeAreaView>
 
   );
