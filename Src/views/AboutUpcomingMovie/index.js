@@ -39,8 +39,37 @@ const AboutUpcomingMovie = ({ route, navigation }) => {
             start={{ x: 0.5, y: 0 }}
             end={{ x: 0.5, y: 0.5 }}
             style={styl.background}>
+            <View style={styl.screen}>
                 <SafeAreaView style={styl.mainContainer}>
-                <View style={styl.screen}>
+                {/* <View style={styl.screen}> */}
+                    {/* <TouchableOpacity onPress={togglePlaying}> */}
+                    {/* <Image style={styl.poster} source={{ uri: poster, }} /> */}
+                    {/* </TouchableOpacity> */}
+                    {/* {trailers[0].results[0] === undefined ? <Image style={styl.poster} source={{ uri: poster, }} /> : <PlayVideo routes={trailers[0].results[0].key}/>  } */}
+                    {/* <YoutubePlayer
+                        height={250}
+                        width={400}
+                        play={playing}
+                        videoId={route.params.info['trailers'][0].results[0].key}
+                    /> */}
+                    {/* <Button title={playing ? 'pause' : 'play'} onPress={togglePlaying}/> */}
+                    {/* <Image style={styl.poster} source={{ uri: poster, }} /> */}
+                    {/* </View> */}
+
+                    <Text style={styl.title}>{title}</Text>
+                    <View style={styl.infoInRow}>
+                        <Text style={styl.MovieInfo}>{year}</Text>
+                        <Entypo name="dot-single" size={18} color="white" />
+                        <Text style={styl.MovieInfo}>{theGenra}</Text>
+                        <Entypo name="dot-single" size={18} color="white" />
+                        <Text style={styl.MovieInfo}>{Runtime}</Text>
+                    </View>
+                    <View style={styl.infoInRow}>
+                    {rating === false ? <Text style={{color: "#F6C700", fontWeight: "bold"}}>Note This Movie Hase No Rating</Text> : <RatingMovies rating={rating}  /> }
+                    </View>
+                    <ScrollView>
+                    <Text style={[styl.MovieInfo, styl.plot]}>{plot}</Text>
+                    
                     {/* <TouchableOpacity onPress={togglePlaying}> */}
                     {/* <Image style={styl.poster} source={{ uri: poster, }} /> */}
                     {/* </TouchableOpacity> */}
@@ -53,20 +82,10 @@ const AboutUpcomingMovie = ({ route, navigation }) => {
                     /> */}
                     {/* <Button title={playing ? 'pause' : 'play'} onPress={togglePlaying}/> */}
                     {/* <Image style={styl.poster} source={{ uri: poster, }} /> */}
-                    </View>
-                    <Text style={styl.title}>{title}</Text>
-                    <View style={styl.infoInRow}>
-                        <Text style={styl.MovieInfo}>{year}</Text>
-                        <Entypo name="dot-single" size={18} color="white" />
-                        <Text style={styl.MovieInfo}>{theGenra}</Text>
-                        <Entypo name="dot-single" size={18} color="white" />
-                        <Text style={styl.MovieInfo}>{Runtime}</Text>
-                    </View>
-                    <View style={styl.infoInRow}>
-                    {rating === false ? <Text style={{color: "#F6C700", fontWeight: "bold"}}>Note This Movie Hase No Rating</Text> : <RatingMovies rating={rating}  /> }
-                    </View>
-                    <Text style={[styl.MovieInfo, styl.plot]}>{plot}</Text>
+             
+                    </ScrollView>
                 </SafeAreaView>
+                </View>
             </LinearGradient>
         </ImageBackground>
     </View>
