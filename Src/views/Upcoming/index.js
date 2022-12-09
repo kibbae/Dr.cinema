@@ -28,24 +28,8 @@ const Upcoming = ({ navigation: {navigate} }) => {
 
   return (
     <View style={styles.screen}>
-        <View>
             <UpcomingMovieList MovieInfo={upcoming}/>
-        </View>
-    <View style={styles.menuBar}>
-                <TouchableOpacity style={styles.menuBarIcons}>
-                    {/* <Ionicons name="person-circle" size={30} color="black" /> */}
-                    <Text>Home</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.menuBarIcons} onPress={() => navigate('')}>
-                    {/* <Ionicons name="add-circle" size={30} color="black" /> */}
-                    <Text>Upcoming</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.menuBarIcons} onPress={() => navigate('')}>
-                    {/* <Ionicons name="add-circle" size={30} color="black" /> */}
-                    <Text>About </Text>
-                </TouchableOpacity>
-            </View>
-        </View>
+    </View>
   );
 };
 

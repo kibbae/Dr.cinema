@@ -19,12 +19,10 @@ const AboutMovie = ({ route, navigation }) => {
     var rating
     var plot
     const ChosenCId = route.params.ChosenCinemaId
-    console.log("AboutMovie file check showtimes")
-    console.log(showtimes)
 
     if (ratings.imdb === null) {
         var { plot } = route.params.info
-        console.log(plot)
+        //console.log(plot)
         rating = false
     } else {
         plot = omdb[0].Plot

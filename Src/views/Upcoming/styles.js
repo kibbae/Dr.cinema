@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
       height: 58,
     },
     screen: {
+      marginBottom: 64,
       backgroundColor: '#263238'
     },
   });
