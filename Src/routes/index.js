@@ -53,7 +53,8 @@ const Taps = () => {
             <Tap.Screen name="LoadPage" component={LoadPage} 
                 options={{
                     tabBarButton: () => null,
-                    tabBarVisible:false //hide tab bar on this screen
+                    tabBarVisible: false, //hide tab bar on this screen
+                    tabBarStyle: { display: "none" },
                 }}
             />
             <Tap.Screen name="Home" component={HomeStackScreen} />

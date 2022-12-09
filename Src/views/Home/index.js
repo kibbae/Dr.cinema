@@ -26,7 +26,6 @@ const Home = () => {
   const [data, setData] = useState(state)
   const notFixallMovies = data['Movies']
   const allMovies = notFixallMovies.Data
-  console.log('shittt ', allMovies)
 
   const [CinemasData, setCinemasData] = React.useState(cinemasjason); 
   const [ChosenCinemaId, setChosenCinemaId] = React.useState('all');
@@ -35,9 +34,6 @@ const Home = () => {
   const [listAllMoviesFilter, setListAllMoviesFilter] = React.useState(allMovies);
   // for search
   const [listAllMovies, setListAllMovies] = React.useState(listAllMoviesFilter)
-  console.log("this is the world")
-  console.log(listAllMovies)
-
 
 
   return (

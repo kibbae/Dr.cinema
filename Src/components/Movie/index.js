@@ -4,14 +4,14 @@ import { useNavigation } from '@react-navigation/native';
 
 import styl from "./style"
 
-const DisplayAnImage = ({ MovieInfo }) => {
+const DisplayAnImage = ({ MovieInfo, ChosenCinemaId }) => {
     console.log("MovieInfo mus check out!!")
     console.log(MovieInfo)
     const { navigate } = useNavigation();
 
   return (
     <View style={styl.container}>
-    <TouchableOpacity onPress={() => navigate('AboutMovie', {info: MovieInfo})}>
+    <TouchableOpacity onPress={() => navigate('AboutMovie', {info: MovieInfo, ChosenCinemaId: ChosenCinemaId})}>
     {/* The Poster Img */}
         <View>
             <Image style={styl.tinyLogo} source={{ uri: MovieInfo.poster, }} />

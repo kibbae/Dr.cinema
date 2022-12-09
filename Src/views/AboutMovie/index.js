@@ -1,18 +1,27 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, ImageBackground, StatusBar, SafeAreaView, TouchableOpacity } from "react-native";
+import { View, Text, Image, StyleSheet, ImageBackground, StatusBar, SafeAreaView, TouchableOpacity, FlatList } from "react-native";
+import { Button, Actionsheet, useDisclose, Center, NativeBaseProvider } from "native-base";
 import { LinearGradient } from 'expo-linear-gradient';
 import { Rating } from 'react-native-ratings';
 import { Entypo } from '@expo/vector-icons';
 
 import styl from "./style"
+import CinemaTickets from "../../components/CinemaTickets"
 
 
 const AboutMovie = ({ route, navigation }) => {
-    const { title, year, poster, genres, durationMinutes, ratings, omdb } = route.params.info
-    console.log("AboutMovie View: this is the omdb")
-    console.log(omdb)
+    const { title, year, poster, genres, durationMinutes, ratings, omdb, showtimes } = route.params.info
+    const {
+        isOpen,
+        onOpen,
+        onClose
+      } = useDisclose();
     var rating
     var plot
+    const ChosenCId = route.params.ChosenCinemaId
+    console.log("AboutMovie file check showtimes")
+    console.log(showtimes)
+
     if (ratings.imdb === null) {
         var { plot } = route.params.info
         console.log(plot)
@@ -21,7 +30,6 @@ const AboutMovie = ({ route, navigation }) => {
         plot = omdb[0].Plot
         rating = ratings.imdb
     }
-    // omdb[0].imdbRating
 
     if (genres.length > 1) {
         var theGenra = genres[0].NameEN + "/" + genres[1].NameEN
@@ -46,6 +54,27 @@ const AboutMovie = ({ route, navigation }) => {
         )
     }
 
+	// var TicketsBox = [];
+
+	// for(let i = 0; i < noGuest; i++){
+
+	// 	payments.push(
+	// 		<View key = {i}>
+	// 			<View>
+	// 				<TextInput />
+	// 			</View>
+	// 			<View>
+	// 				<TextInput />
+	// 			</View>
+	// 			<View>
+	// 				<TextInput />
+	// 			</View>
+	// 		</View>
+	// 	)
+	// }
+
+
+
   return (
     <View style={styl.container}>
         <ImageBackground style={styl.backgroundImage} source={{ uri: poster, }} resizeMode="cover" blurRadius={1}> 
@@ -69,9 +98,16 @@ const AboutMovie = ({ route, navigation }) => {
                     </View>
                     <Text style={[styl.MovieInfo, styl.plot]}>{plot}</Text>
                     <View style={styl.coverButton}>
-                        <TouchableOpacity style={styl.GetTicketButton}>
+                        <TouchableOpacity style={styl.GetTicketButton} onPress={onOpen}>
                             <Text>Get Ticket</Text>
                         </TouchableOpacity>
+                        
+                        <Actionsheet isOpen={isOpen} onClose={onClose}>
+                            <Actionsheet.Content>
+                                <View><Text>Siggi</Text></View>
+                                {showtimes.map((showtime) => <CinemaTickets AllShowTimes={showtime} ChosenCId={ChosenCId}/> )}
+                            </Actionsheet.Content>
+                        </Actionsheet>
                     </View>
                 </SafeAreaView>
             </LinearGradient>
