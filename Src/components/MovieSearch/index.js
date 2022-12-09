@@ -4,7 +4,7 @@ import { Feather, MaterialIcons } from '@expo/vector-icons';
 
 import styl from "./style"
 
-const MovieList = ({ listAllMovies, setListAllMovies, orgAllMovies }) => {
+const MovieSearch = ({ listAllMovies, setListAllMovies, orgAllMovies }) => {
     // clear search input with calcel button 
     const [search, setSearch] = React.useState("");
     
@@ -43,7 +43,7 @@ const MovieList = ({ listAllMovies, setListAllMovies, orgAllMovies }) => {
     );
 };
 
-export default MovieList;
+export default MovieSearch;
 
 
 

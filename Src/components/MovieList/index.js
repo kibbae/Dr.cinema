@@ -4,7 +4,7 @@ import { View, Text, FlatList } from "react-native";
 import Movie from "../Movie"
 
 const MovieList = ({ MovieInfo,ChosenCinemaId }) => {
-    console.log(MovieInfo)
+    //console.log(MovieInfo)
     //const strAscending = [...MovieInfo].sort((a, b) => a.name > b.name ? 1 : -1,);
 
     return (

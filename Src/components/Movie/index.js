@@ -5,8 +5,8 @@ import { useNavigation } from '@react-navigation/native';
 import styl from "./style"
 
 const DisplayAnImage = ({ MovieInfo }) => {
-    console.log("MovieInfo mus check out!!")
-    console.log(MovieInfo)
+    //console.log("MovieInfo mus check out!!")
+    //console.log(MovieInfo)
     const { navigate } = useNavigation();
 
   return (
