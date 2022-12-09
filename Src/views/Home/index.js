@@ -30,7 +30,7 @@ const Home = () => {
 
 
   return (
-    <SafeAreaView style={{ flex:0, backgroundColor: '#263238' }}>
+    <SafeAreaView style={{ flex:1, backgroundColor: '#263238', marginBottom:64 }}>
       
        <FormControl mt="3" >
        <DropDown 

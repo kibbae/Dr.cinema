@@ -8,7 +8,6 @@ const MovieList = ({ MovieInfo,ChosenCinemaId }) => {
     //const strAscending = [...MovieInfo].sort((a, b) => a.name > b.name ? 1 : -1,);
 
     return (
-        <View>
             <FlatList
                 numColumns={1}
                 data={MovieInfo}
@@ -16,7 +15,6 @@ const MovieList = ({ MovieInfo,ChosenCinemaId }) => {
                     <Movie MovieInfo={item}/>
                 )}
             />
-        </View>
     );
 };
 
