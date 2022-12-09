@@ -441,13 +441,13 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 async function LoadEverything() {
     store.dispatch(fetchAuth())
     await waitforauth()
+    store.dispatch(putAllDataLoaded())
     store.dispatch(fetchMovies())
     store.dispatch(fetchCinemas())
+    //await waitforloading()
     store.dispatch(fetchGenres())
     store.dispatch(fetchUpcoming())
-    await waitforloading()
-    store.dispatch(putAllDataLoaded())
-    console.log("everything is loaded", store.getState())
+    //console.log("everything is loaded", store.getState())
 }
 
 LoadEverything()

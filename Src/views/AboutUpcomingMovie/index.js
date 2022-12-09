@@ -15,8 +15,9 @@ const AboutUpcomingMovie = ({ route, navigation }) => {
     var rating
     var plot
     if (omdb === [] || omdb[0].imdbRating === "N/A" ) {
+
         var { plot } = route.params.info
-        console.log(plot)
+        //console.log(plot)
         rating = false
     } else {
         plot = omdb[0].Plot
