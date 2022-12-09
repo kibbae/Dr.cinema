@@ -6,7 +6,7 @@ import YoutubePlayer from "react-native-youtube-iframe";
 import styl from '../style';
 
 
-const PlayVideo = ({route}) => {
+const PlayVideo = ({routes}) => {
     const [playing, setPlaying] = React.useState(false);
     const togglePlaying = () => {
         setPlaying(!playing);
@@ -17,7 +17,7 @@ const PlayVideo = ({route}) => {
      height={250}
      width={400}
      play={playing}
-     videoId={route}/>
+     videoId={routes}/>
     )
  };
 
