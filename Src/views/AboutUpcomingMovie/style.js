@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
   plot: {
     paddingTop: 30,
     textAlign: 'center',
+    marginBottom: 30,
   },
   coverButton: {
     position: 'absolute',
@@ -70,6 +71,11 @@ const styles = StyleSheet.create({
     width: 200,
     height: 50,
   },
+  screen: {
+    position: 'absolute',
+    top: '30%',
+    height: '65%',
+  }
 });
 
 export default styles;
