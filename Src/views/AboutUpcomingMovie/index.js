@@ -41,21 +41,6 @@ const AboutUpcomingMovie = ({ route, navigation }) => {
             style={styl.background}>
             <View style={styl.screen}>
                 <SafeAreaView style={styl.mainContainer}>
-                {/* <View style={styl.screen}> */}
-                    {/* <TouchableOpacity onPress={togglePlaying}> */}
-                    {/* <Image style={styl.poster} source={{ uri: poster, }} /> */}
-                    {/* </TouchableOpacity> */}
-                    {/* {trailers[0].results[0] === undefined ? <Image style={styl.poster} source={{ uri: poster, }} /> : <PlayVideo routes={trailers[0].results[0].key}/>  } */}
-                    {/* <YoutubePlayer
-                        height={250}
-                        width={400}
-                        play={playing}
-                        videoId={route.params.info['trailers'][0].results[0].key}
-                    /> */}
-                    {/* <Button title={playing ? 'pause' : 'play'} onPress={togglePlaying}/> */}
-                    {/* <Image style={styl.poster} source={{ uri: poster, }} /> */}
-                    {/* </View> */}
-
                     <Text style={styl.title}>{title}</Text>
                     <View style={styl.infoInRow}>
                         <Text style={styl.MovieInfo}>{year}</Text>
@@ -69,20 +54,7 @@ const AboutUpcomingMovie = ({ route, navigation }) => {
                     </View>
                     <ScrollView>
                     <Text style={[styl.MovieInfo, styl.plot]}>{plot}</Text>
-                    
-                    {/* <TouchableOpacity onPress={togglePlaying}> */}
-                    {/* <Image style={styl.poster} source={{ uri: poster, }} /> */}
-                    {/* </TouchableOpacity> */}
                     {trailers[0].results[0] === undefined ? <Image style={styl.poster} source={{ uri: poster, }} /> : <PlayVideo routes={trailers[0].results[0].key}/>  }
-                    {/* <YoutubePlayer
-                        height={250}
-                        width={400}
-                        play={playing}
-                        videoId={route.params.info['trailers'][0].results[0].key}
-                    /> */}
-                    {/* <Button title={playing ? 'pause' : 'play'} onPress={togglePlaying}/> */}
-                    {/* <Image style={styl.poster} source={{ uri: poster, }} /> */}
-             
                     </ScrollView>
                 </SafeAreaView>
                 </View>

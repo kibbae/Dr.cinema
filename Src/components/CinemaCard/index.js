@@ -28,16 +28,18 @@ const Cinema = ({ CinemaInfo }) => {
             <Text style={styl.moviename}>{CinemaInfo.name}</Text>
             <Text style={styl.text}>Adress: {CinemaInfo.address}</Text>
             <Text style={styl.description}>{CinemaInfo.description === null ? null : CinemaInfo.description.replace(/\\t/g, ' ').replace(/<br>/g, "\n").replace(/<b>/g, "") }</Text>
-            <View style={{marginLeft: 'auto', marginRight: 'auto'}} >
+            
+                <View style={{flex:1, flexDirection: 'row'}}>
 
-            {CinemaInfo.phone === null ? null : <TouchableOpacity style={styl.link} onPress={triggerCall}>
-            <Text  > {CinemaInfo.phone}</Text></TouchableOpacity>}
+                <TouchableOpacity style={styl.link} onPress={() => console.log(Linking.openURL('http://'+CinemaInfo.website))}>
+                <Text style={styl.buttonText} >{CinemaInfo.website}</Text>
+                </TouchableOpacity>
+                {CinemaInfo.phone === null ? null : <TouchableOpacity style={styl.link} onPress={triggerCall}>
+                <Text style={styl.buttonText} > {CinemaInfo.phone}</Text></TouchableOpacity>}
 
-            <TouchableOpacity style={styl.link}>
-            <Text  onPress={() => console.log(Linking.openURL('http://'+CinemaInfo.website))}>{CinemaInfo.website}</Text>
-            </TouchableOpacity>
+                </View>
             </View>
-        </View>
+        
     </TouchableOpacity>
     </View>
         )

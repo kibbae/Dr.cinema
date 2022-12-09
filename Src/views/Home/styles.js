@@ -19,6 +19,15 @@ export default StyleSheet.create({
     cinematext: {
         color: 'white',
         fontWeight: 'bold',
-    }
+    }, 
+    incinema: {
+        backgroundColor: '#263238',
+        color: 'white',
+        fontSize: 30,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginTop: 10,
+        
+      },
 });
 

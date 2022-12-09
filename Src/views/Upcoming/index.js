@@ -3,8 +3,7 @@ import { useState } from "react";
 import {
   View,
   Text,
-  TouchableOpacity,
-  Image
+  SafeAreaView,
 } from "react-native";
 import {
   FormControl,
@@ -27,9 +26,14 @@ const Upcoming = ({ navigation: {navigate} }) => {
 
 
   return (
-    <View style={styles.screen}>
-            <UpcomingMovieList MovieInfo={upcoming}/>
-    </View>
+    <SafeAreaView style={styles.screen}>
+      <View>
+        <Text style={styles.comingsoon}>Coming Soon</Text>
+      </View>
+      <View style={styles.screen}>
+              <UpcomingMovieList MovieInfo={upcoming}/>
+      </View>
+    </SafeAreaView>
   );
 };
 
