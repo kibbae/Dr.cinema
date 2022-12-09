@@ -447,7 +447,7 @@ async function LoadEverything() {
     store.dispatch(fetchUpcoming())
     await waitforloading()
     store.dispatch(putAllDataLoaded())
-    //console.log("everything is loaded", store.getState())
+    console.log("everything is loaded", store.getState())
 }
 
 LoadEverything()

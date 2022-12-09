@@ -48,7 +48,7 @@ const DropDown = ({ ChosenCinemaId, setChosenCinemaId, CinemasData, orgAllMovies
           endIcon: <CheckIcon size="5" />
         }} mt={1} onValueChange={(itemValue) => {setChosenCinemaId(itemValue), filterByCinemaID(itemValue)}} style={{color: 'white'}}>
             {getSelectionFromData(CinemasData).map((item) => (
-              <Select.Item label={item.display_list_name} value={item.id} key="{item.id}"/>
+              <Select.Item label={item.display_list_name} value={item.id} key={item.id}/>
             ))}
             <Select.Item label='All Cinemas' value='all'/>
           </Select>
