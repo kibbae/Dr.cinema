@@ -70,6 +70,20 @@ const styles = StyleSheet.create({
     width: 200,
     height: 50,
   },
+  GetTicketView: {
+    alignItems: "flex-start", 
+    backgroundColor: '#151515',
+  },
+  containerListInfo: {
+    flexDirection: 'row',
+    justifyContent:'space-around',
+    width: '100%',
+  },
+  ListInfoTitle: {
+    color: '#D0D0D0',
+    fontSize: 20,
+    fontWeight: 'bold',
+},
 });
 
 export default styles;

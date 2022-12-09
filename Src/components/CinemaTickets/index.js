@@ -1,25 +1,23 @@
 import React from "react";
 import { View, Text, FlatList, ScrollView } from "react-native";
 
-import Movie from "../Movie"
+import Ticket from "./components/Ticket";
+import styl from "./style"
 
 const CinemaTickets = ({ AllShowTimes, ChosenCId }) => {
-    console.log("CinemaTickets file checking data from AllShowTimes")
-    console.log(AllShowTimes.cinema.id)
-    console.log(ChosenCId)
 
     const flatListShowTimes = () => {
         return (
-            <ScrollView horizontal={true}>
-                <Text style={{color: 'red'}}>{AllShowTimes.cinema.name}</Text>
-                {AllShowTimes.schedule.map((scheduleInfo) => <Text>{scheduleInfo.time}</Text>)}
-                
-            </ScrollView>
+            <View>
+                <Text style={styl.title}>{AllShowTimes.cinema.name}</Text>
+                <ScrollView horizontal={true}>
+                    {AllShowTimes.schedule.map((scheduleInfo) => <Ticket scheduleInfo={scheduleInfo}/>)}
+                </ScrollView>
+            </View>
         )
     }
 
     if (ChosenCId === "all") {
-        console.log("in the all show times")
         return (flatListShowTimes())
     } else if (ChosenCId === AllShowTimes.cinema.id) {
         return (flatListShowTimes())

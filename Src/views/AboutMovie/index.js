@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, ImageBackground, StatusBar, SafeAreaView, TouchableOpacity, FlatList } from "react-native";
+import { View, Text, Image, StyleSheet, ImageBackground, StatusBar, SafeAreaView, TouchableOpacity, ScrollView } from "react-native";
 import { Button, Actionsheet, useDisclose, Center, NativeBaseProvider } from "native-base";
 import { LinearGradient } from 'expo-linear-gradient';
 import { Rating } from 'react-native-ratings';
@@ -103,9 +103,20 @@ const AboutMovie = ({ route, navigation }) => {
                         </TouchableOpacity>
                         
                         <Actionsheet isOpen={isOpen} onClose={onClose}>
-                            <Actionsheet.Content>
-                                <View><Text>Siggi</Text></View>
-                                {showtimes.map((showtime) => <CinemaTickets AllShowTimes={showtime} ChosenCId={ChosenCId}/> )}
+                            <Actionsheet.Content style={styl.GetTicketView}>
+                                <View style={styl.containerListInfo}>
+                                    <View style={styl.row}>
+                                        <Text style={styl.ListInfoTitle}>Cinema Room = </Text>
+                                        <Text style={[styl.ListInfoTitle, {color: "#F6C700"}]}>CR</Text>
+                                    </View>
+                                    <View style={styl.row}>
+                                        <Text style={styl.ListInfoTitle}>Language = </Text>
+                                        <Text style={[styl.ListInfoTitle, {color: "#F6C700"}]}>L</Text>
+                                    </View>
+                                </View>
+                                <ScrollView style={{marginTop: 20, width: '100%'}}>
+                                    {showtimes.map((showtime) => <CinemaTickets AllShowTimes={showtime} ChosenCId={ChosenCId}/> )}
+                                </ScrollView>
                             </Actionsheet.Content>
                         </Actionsheet>
                     </View>
