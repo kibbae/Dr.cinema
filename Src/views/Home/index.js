@@ -10,14 +10,10 @@ import {
   FormControl,
 } from "native-base";
 import { useSelector, useDispatch } from "react-redux"
-
-import cinemasjason from "../../resources/cinemas.json";
 import DropDown from "../../components/DropDown";
 import MovieList from "../../components/MovieList";
 import styles from "./styles";
 import MovieSearch from "../../components/MovieSearch";
-import LoadPage from "../LoadPage";
-import { fetchMovies } from "../../DataSystem/Redux/store"
 
 
 
@@ -26,16 +22,10 @@ const Home = () => {
   const [data, setData] = useState(state)
   const notFixallMovies = data['Movies']
   const allMovies = notFixallMovies.Data
-  //console.log('shittt ', allMovies)
   const [CinemasData, setCinemasData] = React.useState(data["Cinemas"].Data); 
   const [ChosenCinemaId, setChosenCinemaId] = React.useState('all');
-
-  // for Filter by cinemas
   const [listAllMoviesFilter, setListAllMoviesFilter] = React.useState(allMovies);
-  // for search
   const [listAllMovies, setListAllMovies] = React.useState(listAllMoviesFilter)
-  //console.log("this is the world")
-  //console.log(listAllMovies)
 
 
 
