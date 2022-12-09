@@ -7,16 +7,17 @@ import Home from "../views/Home"
 import AboutMovie from "../views/AboutMovie"
 import Upcoming from "../views/Upcoming"
 import AboutUpcomingMovie from "../views/AboutUpcomingMovie"
-
+import AboutCinema from "../views/AboutCinema"
 
 const Tap = createBottomTabNavigator();
 const AuthStack = createStackNavigator();
 const HomeStack = createStackNavigator();
 
+
 function HomeStackScreen() {
     return (
       <HomeStack.Navigator>
-       <HomeStack.Screen name="Home" component={Home} options={{headerShown: false,}}/> 
+       <HomeStack.Screen name="Home" component={Home} options={{headerShown: false,}}/>      
        <HomeStack.Screen name="AboutMovie" component={AboutMovie} options={{headerShown: false,}}/>       
        <HomeStack.Screen name="AboutUpcomingMovie" component={AboutUpcomingMovie} options={{headerShown: false,}}/>            
       </HomeStack.Navigator>
@@ -34,7 +35,10 @@ const Taps = () => {
                     if (route.name === 'Home') {
                         iconName = focused ? 'ios-home' : 'ios-home-outline';
                     } else if (route.name === 'Upcoming') {
-                        iconName = focused ? 'exclamationcircle' : 'exclamationcircleo';
+                        iconName = focused ? 'newspaper' : 'newspaper-outline';
+                    }
+                        else if (route.name === 'AboutCinema') {
+                        iconName = focused ? 'information-circle' : 'information-circle-outline';
                     }
                     return <Ionicons name={iconName} size={24} color="white" />
                 },
@@ -59,6 +63,7 @@ const Taps = () => {
             />
             <Tap.Screen name="Home" component={HomeStackScreen} />
             <Tap.Screen name="Upcoming" component={Upcoming}  /> 
+            <Tap.Screen name="AboutCinema" component={AboutCinema}  />
         </Tap.Navigator>
     );
 };

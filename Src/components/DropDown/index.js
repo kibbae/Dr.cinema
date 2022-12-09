@@ -6,6 +6,7 @@ import {
   } from "native-base";
 
 const getSelectionFromData = (CinemaData) => {
+    CinemaData.sort((a,b) => a.name.localeCompare(b.name))
     return CinemaData.map((item) => { 
       const Final = {
         id: item.id,
@@ -14,7 +15,7 @@ const getSelectionFromData = (CinemaData) => {
         phone: item.phone,
         website: item.website,
         description: item.description,
-        display_list_name: item.name + " | " + item.website.slice(4),
+        display_list_name: item.name + " | " + item.website,
       };
       return Final;
     }
@@ -38,16 +39,16 @@ const DropDown = ({ ChosenCinemaId, setChosenCinemaId, CinemasData, orgAllMovies
   }
 
   
-    return <Center>
+    return <Center style={{height: 55}}>
         <Box maxW="300">
           <Select selectedValue={ChosenCinemaId} minWidth="200" accessibilityLabel="Choose Service" placeholder="Choose Service" _selectedItem={{
           bg: "teal.600",
           endIcon: <CheckIcon size="5" />
-        }} mt={1} onValueChange={(itemValue) => {setChosenCinemaId(itemValue), filterByCinemaID(itemValue)}}>
+        }} mt={1} onValueChange={(itemValue) => {setChosenCinemaId(itemValue), filterByCinemaID(itemValue)}} style={{color: 'white'}}>
             {getSelectionFromData(CinemasData).map((item) => (
               <Select.Item label={item.display_list_name} value={item.id} />
             ))}
-            <Select.Item label='All Cinemas' value='all' />
+            <Select.Item label='All Cinemas' value='all'/>
           </Select>
         </Box>
       </Center>;

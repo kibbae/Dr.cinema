@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, ImageBackground, StatusBar, SafeAreaView, TouchableOpacity } from "react-native";
+import { View, Text, Image, StyleSheet, ImageBackground, StatusBar, SafeAreaView, TouchableOpacity, Linking, ScrollView } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import { Rating } from 'react-native-ratings';
 import { Entypo } from '@expo/vector-icons';
@@ -69,9 +69,9 @@ const AboutMovie = ({ route, navigation }) => {
                     </View>
                     <Text style={[styl.MovieInfo, styl.plot]}>{plot}</Text>
                     <View style={styl.coverButton}>
-                        <TouchableOpacity style={styl.GetTicketButton}>
-                            <Text>Get Ticket</Text>
-                        </TouchableOpacity>
+                    <TouchableOpacity style={styl.GetTicketButton}>
+                    <Text onPress={() => console.log(Linking.openURL(route.params.info['trailers'][0].results[0].url))}>Watch Trailer</Text>
+                    </TouchableOpacity>
                     </View>
                 </SafeAreaView>
             </LinearGradient>
