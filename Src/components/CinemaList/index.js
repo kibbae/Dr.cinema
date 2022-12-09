@@ -30,7 +30,6 @@ const CinemaList = ({ CinemaInfo,ChosenCinemaId }) => {
 
 
     return (
-        <SafeAreaView>
             <FlatList
                 numColumns={1}
                 data={filterdata}
@@ -38,7 +37,6 @@ const CinemaList = ({ CinemaInfo,ChosenCinemaId }) => {
                     <Cinema CinemaInfo={item}/>
                 )}
             />
-        </SafeAreaView>
     );
 };
 

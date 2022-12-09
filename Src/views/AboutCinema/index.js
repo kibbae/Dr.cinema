@@ -87,7 +87,7 @@ const AboutCinema = () => {
     const [listAllMovies, setListAllMovies] = React.useState(listAllMoviesFilter)
     return(
         <NativeBaseProvider  >
-        <View safeArea style={{ flex:0, backgroundColor: '#263238' }}>
+        <View safeArea style={{ flex:1, backgroundColor: '#263238', marginBottom:64 }}>
             <FormControl p={'12'}>
             <DropDown 
        ChosenCinemaId={ChosenCinemaId} 
@@ -98,9 +98,8 @@ const AboutCinema = () => {
        setListAllMovies={setListAllMovies}
        />
             </FormControl>
-            <FormControl>
             <CinemaList CinemaInfo={CinemasData2} ChosenCinemaId={ChosenCinemaId} />
-            </FormControl>
+
 
             
         </View>
