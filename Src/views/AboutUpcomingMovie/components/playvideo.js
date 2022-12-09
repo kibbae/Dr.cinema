@@ -15,7 +15,7 @@ const PlayVideo = ({routes}) => {
     return (
      <YoutubePlayer
      height={250}
-     width={400}
+     width='100%'
      play={playing}
      videoId={routes}/>
     )

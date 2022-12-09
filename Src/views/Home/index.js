@@ -44,6 +44,9 @@ const Home = () => {
         {/* <Text style={styles.cinematext} >{ChosenCinemaId === 'all' ? CinemasData.map((item) => ' - ' + item.name) : CinemasData.find((item) => item.id === ChosenCinemaId).name}</Text> */}
         </FormControl>
         <MovieSearch listAllMovies={listAllMovies} setListAllMovies={setListAllMovies} orgAllMovies={listAllMoviesFilter}/>
+        <View>
+          <Text style={styles.incinema}>In Cinema now</Text>
+        </View>
         <MovieList ChosenCinemaId={ChosenCinemaId} MovieInfo={listAllMovies} />
     </SafeAreaView>
 

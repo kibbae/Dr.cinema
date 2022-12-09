@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
   },
   MovieInfo: {
     fontSize: 15,
+   // width: 350,
     color: '#B3B3B3',
   },
   TheDot: {
@@ -53,6 +54,7 @@ const styles = StyleSheet.create({
   plot: {
     paddingTop: 30,
     textAlign: 'center',
+    width: 350,
     marginBottom: 30,
   },
   coverButton: {

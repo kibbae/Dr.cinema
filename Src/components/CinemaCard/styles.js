@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
       height: 58,
     },
     moviename: {
+      marginTop: 10,
       color: 'white',
       fontSize: 20,
       fontWeight: 'bold',
@@ -33,6 +34,8 @@ const styles = StyleSheet.create({
     text: {
       color: 'white',
       fontSize: 16,
+      fontStyle: 'italic',
+      marginBottom: 10,
 
 
 
@@ -52,16 +55,24 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       borderRadius: 15,
-      backgroundColor: '#F6C700',
-      width:  200,
+      borderWidth: 1,
+      boarderColor: 'white',
+      backgroundColor: '#263238',
+      width:  180,
       height: 50,
       marginVertical: 10,
+      marginHorizontal: 10,
 
     },
     buttons: {
       justifyContent: 'center',
       flex: 1,
     },
+    buttonText: {
+      color: 'white',
+      fontSize: 16,
+      fontWeight: 'bold',
+    }
 
   });
 
