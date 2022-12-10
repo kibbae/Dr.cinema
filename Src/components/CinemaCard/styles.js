@@ -22,50 +22,63 @@ const styles = StyleSheet.create({
       height: 58,
     },
     moviename: {
+      marginTop: 10,
       color: 'white',
       fontSize: 20,
       fontWeight: 'bold',
       textAlign: 'left',
-      position: 'absolute',
-      width: 170,
-      left: 170,
-      top: -180,
+      paddingLeft: 5,
+
+
 
     },
     text: {
       color: 'white',
       fontSize: 16,
-      width: 170,
-      top: -155,
-      left: 170,
+      fontStyle: 'italic',
+      marginBottom: 10,
+      paddingLeft: 5,
+
 
 
     },
     phone: {
       color: 'white',
       fontSize: 16,
-      width: 170,
-      top: -152,
-      left: 170,
+
 
     },
     description : {
       color: 'white',
-      fontSize: 16,
-      top: -60,
+      paddingLeft: 5,
+      paddingRight: 5,
+
+
 
     },
     link: {
       justifyContent: 'center',
       alignItems: 'center',
       borderRadius: 15,
-      backgroundColor: '#F6C700',
-      width: 300,
+      borderWidth: 1,
+      boarderColor: 'white',
+      backgroundColor: '#263238',
+      paddingLeft: 10,
+      paddingRight: 10,
       height: 50,
-      top: -50,
-      left: 50,
-    },
+      marginVertical: 10,
+      marginHorizontal: 10,
 
+    },
+    buttons: {
+      justifyContent: 'center',
+      flex: 1,
+    },
+    buttonText: {
+      color: 'white',
+      fontSize: 16,
+      fontWeight: 'bold',
+    }
 
   });
 

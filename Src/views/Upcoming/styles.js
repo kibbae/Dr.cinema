@@ -14,6 +14,17 @@ const styles = StyleSheet.create({
       marginBottom: 64,
       backgroundColor: '#263238'
     },
+    comingsoon: {
+      backgroundColor: '#263238',
+      color: 'white',
+      fontSize: 30,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginTop: 20,
+      marginBottom: 10,
+      
+    },
+
   });
 
 export default styles;

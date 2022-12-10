@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity,Linking} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
+import call from 'react-native-phone-call'
 import styl from "./styles"
 
 
@@ -9,29 +9,37 @@ import styl from "./styles"
 
 
 const Cinema = ({ CinemaInfo }) => {
-    // remvoe \t from description and replace with space and remove <br> from description and replace with new line and if description is empty then set it to "No description available"
-    // CinemaInfo.description = CinemaInfo.description.replace(/\\t/g, ' ').replace(/<br>/g, '{"\n"}');
-    // remove <b> from description make it bold and replace with new line
 
-    // cinemaInfo.description = cinemaInfo.description.replace(/<b>/g
+    const triggerCall = () => {
+
+        const args = {
+            number: CinemaInfo.phone,
+            prompt: true,
+            skipCanOpen: true
+        };
+        // make call
+        call(args).catch(console.error)
+    };
+
     return (
             <View style={styl.container}>
     <TouchableOpacity>
-    {/* The Poster Img */}
-        <View>
-            <Image style={styl.tinyLogo} source={{uri:"https://img.freepik.com/premium-vector/cinema-movie-background-popcorn-filmstrip-clapboard-tickets-movie-time-background_41737-248.jpg"}} />
-            
-        </View>
-    {/* The Movie Title and other info */}
         <View>
             <Text style={styl.moviename}>{CinemaInfo.name}</Text>
             <Text style={styl.text}>Adress: {CinemaInfo.address}</Text>
-            <Text style={styl.phone}>Phone Number: {CinemaInfo.phone}</Text>
-            <Text style={styl.description}>{CinemaInfo.description === null ? 'No description available' : CinemaInfo.description.replace(/\\t/g, ' ').replace(/<br>/g, "\n").replace(/<b>/g, "") }</Text>
-            <TouchableOpacity style={styl.link}>
-            <Text  onPress={() => console.log(Linking.openURL('http://'+CinemaInfo.website))}>{CinemaInfo.website}</Text>
-            </TouchableOpacity>
-        </View>
+            <Text style={styl.description}>{CinemaInfo.description === null ? null : CinemaInfo.description.replace(/\\t/g, ' ').replace(/<br>/g, "\n").replace(/<b>/g, "") }</Text>
+            
+                <View style={{flex:1, flexDirection: 'row'}}>
+
+                <TouchableOpacity style={styl.link} onPress={() => console.log(Linking.openURL('http://'+CinemaInfo.website))}>
+                <Text style={styl.buttonText} >{CinemaInfo.website}</Text>
+                </TouchableOpacity>
+                {CinemaInfo.phone === null ? null : <TouchableOpacity style={styl.link} onPress={triggerCall}>
+                <Text style={styl.buttonText} > {CinemaInfo.phone}</Text></TouchableOpacity>}
+
+                </View>
+            </View>
+        
     </TouchableOpacity>
     </View>
         )

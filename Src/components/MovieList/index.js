@@ -14,6 +14,7 @@ const MovieList = ({ MovieInfo,ChosenCinemaId }) => {
                 renderItem={({item}) => (
                     <Movie MovieInfo={item} ChosenCinemaId={ChosenCinemaId}/>
                 )}
+                style={{marginTop: 10}}
             />
     );
 };
