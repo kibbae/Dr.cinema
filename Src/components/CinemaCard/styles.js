@@ -2,13 +2,12 @@ import { StyleSheet } from "react-native";
 
 
 const styles = StyleSheet.create({
-    container: {
-      margin: 10,
+  MainContainer: {
+    margin: 10,
+      alignItems: 'center',
       backgroundColor: '#37474F',
-      flexDirection:'row',
-      borderRadius: 5,
-
-    },
+      borderRadius: 20,
+  },
     tinyLogo: {
       width: 156,
       height: 217,
@@ -24,37 +23,29 @@ const styles = StyleSheet.create({
     moviename: {
       marginTop: 10,
       color: 'white',
-      fontSize: 20,
+      fontSize: 25,
       fontWeight: 'bold',
       textAlign: 'left',
       paddingLeft: 5,
-
-
-
     },
     text: {
       color: 'white',
       fontSize: 16,
       fontStyle: 'italic',
+      fontWeight: 'bold',
+      marginTop: 5,
       marginBottom: 10,
-      paddingLeft: 5,
-
-
-
+      textAlign: 'center',
     },
     phone: {
       color: 'white',
       fontSize: 16,
-
-
     },
     description : {
       color: 'white',
       paddingLeft: 5,
       paddingRight: 5,
-
-
-
+      textAlign: 'center',
     },
     link: {
       justifyContent: 'center',

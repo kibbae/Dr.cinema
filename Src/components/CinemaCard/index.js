@@ -24,7 +24,7 @@ const Cinema = ({ CinemaInfo }) => {
     return (
             <View style={styl.container}>
     <TouchableOpacity>
-        <View>
+        <View style={styl.MainContainer}>
             <Text style={styl.moviename}>{CinemaInfo.name}</Text>
             <Text style={styl.text}>Adress: {CinemaInfo.address}</Text>
             <Text style={styl.description}>{CinemaInfo.description === null ? null : CinemaInfo.description.replace(/\\t/g, ' ').replace(/<br>/g, "\n").replace(/<b>/g, "") }</Text>
