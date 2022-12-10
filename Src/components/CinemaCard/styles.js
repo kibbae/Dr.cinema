@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: 'bold',
       textAlign: 'left',
+      paddingLeft: 5,
 
 
 
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
       fontSize: 16,
       fontStyle: 'italic',
       marginBottom: 10,
+      paddingLeft: 5,
 
 
 
@@ -48,6 +50,9 @@ const styles = StyleSheet.create({
     },
     description : {
       color: 'white',
+      paddingLeft: 5,
+      paddingRight: 5,
+
 
 
     },
@@ -58,7 +63,8 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       boarderColor: 'white',
       backgroundColor: '#263238',
-      width:  180,
+      paddingLeft: 10,
+      paddingRight: 10,
       height: 50,
       marginVertical: 10,
       marginHorizontal: 10,

@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
       fontSize: 30,
       fontWeight: 'bold',
       textAlign: 'center',
-      marginTop: 10,
+      marginTop: 20,
       marginBottom: 10,
       
     },

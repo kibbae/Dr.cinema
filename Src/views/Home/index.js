@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <SafeAreaView style={{ flex:1, backgroundColor: '#263238', marginBottom:64 }}>
       
-       <FormControl mt="3" >
+       <FormControl mt="3" style={{marginTop: 10,}}>
        <DropDown 
        ChosenCinemaId={ChosenCinemaId} 
        setChosenCinemaId={setChosenCinemaId} 
@@ -40,6 +40,7 @@ const Home = () => {
        orgAllMovies={allMovies}
        setListAllMoviesFilter={setListAllMoviesFilter}
        setListAllMovies={setListAllMovies}
+
        />
         {/* <Text style={styles.cinematext} >{ChosenCinemaId === 'all' ? CinemasData.map((item) => ' - ' + item.name) : CinemasData.find((item) => item.id === ChosenCinemaId).name}</Text> */}
         </FormControl>
