@@ -5,6 +5,9 @@ import {
     CheckIcon
   } from "native-base";
 
+import Cinema from "./components/Cinema"
+import Movie from "./components/Movie"
+
 
 
 const getSelectionFromData = (CinemaData) => {
@@ -24,19 +27,14 @@ const getSelectionFromData = (CinemaData) => {
     );
   };
 
-const DropDown = ({ ChosenCinemaId, setChosenCinemaId, CinemasData, orgAllMovies, setListAllMoviesFilter, setListAllMovies }) => {
+const DropDown = ({ ChosenCinemaId, setChosenCinemaId, CinemasData, orgAllMovies, setListAllMoviesFilter, setListAllMovies, fromToWhere }) => {
   // það þarf að refresha síðuna til að sýna allan listan aftur. 
   // þarf hjálp á morgun til að laga þetta.
   const filterByCinemaID = (cinemaID) => {
-    if (cinemaID !== 'all') {
-      const filterdMovies = orgAllMovies.filter(movie => 
-        movie.showtimes.some(cinemas => cinemas.cinema.id === cinemaID)
-        );
-      setListAllMoviesFilter(filterdMovies)
-      setListAllMovies(filterdMovies);
-    } else {
-      setListAllMoviesFilter(orgAllMovies)
-      setListAllMovies(orgAllMovies);
+    if (fromToWhere === "Movie") {
+      Movie(cinemaID, orgAllMovies, setListAllMoviesFilter, setListAllMovies)
+    } else if (fromToWhere === "Cinema") {
+      Cinema(cinemaID, orgAllMovies, setListAllMoviesFilter, setListAllMovies)
     }
   }
 

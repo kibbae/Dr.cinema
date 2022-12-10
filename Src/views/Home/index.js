@@ -39,6 +39,7 @@ const Home = () => {
         orgAllMovies={allMovies}
         setListAllMoviesFilter={setListAllMoviesFilter}
         setListAllMovies={setListAllMovies}
+        fromToWhere={"Movie"}
        />
         {/* <Text style={styles.cinematext} >{ChosenCinemaId === 'all' ? CinemasData.map((item) => ' - ' + item.name) : CinemasData.find((item) => item.id === ChosenCinemaId).name}</Text> */}
         </FormControl>

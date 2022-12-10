@@ -10,17 +10,18 @@ import styles from "./styles";
 const AboutCinema = () => {
   const state = useSelector(state => state)
   const [data, setData] = useState(state)
-  const [CinemasData1, setCinemasData1] = React.useState(data["Cinemas"].Data); 
-  const [CinemasData2, setCinemasData2] = React.useState(data["Cinemas"].Data); 
+
+  console.log("AboutCinema file checking data from data[Cinemas].Data")
+  const allCinemas = data["Cinemas"].Data
+  
+  const [dummy, setDummy] = React.useState(null)
+  const [CinemasData, setCinemasData] = React.useState(allCinemas); 
   const [ChosenCinemaId, setChosenCinemaId] = React.useState('all');
-  const notFixallMovies = data['Movies']
-  const allMovies = notFixallMovies.Data
   // if ChosenCinemaId is not all then filter the data by cinema id and display only cinema with that id
 
   // for Filter by cinemas
-    const [listAllMoviesFilter, setListAllMoviesFilter] = React.useState(allMovies);
-  // for search
-    const [listAllMovies, setListAllMovies] = React.useState(listAllMoviesFilter)
+
+
     return(
       <NativeBaseProvider>
         <View safeArea style={styles.container}>
@@ -28,13 +29,14 @@ const AboutCinema = () => {
             <DropDown 
               ChosenCinemaId={ChosenCinemaId} 
               setChosenCinemaId={setChosenCinemaId} 
-              CinemasData={CinemasData1} 
-              orgAllMovies={allMovies}
-              setListAllMoviesFilter={setListAllMoviesFilter}
-              setListAllMovies={setListAllMovies}
+              CinemasData={allCinemas} 
+              orgAllMovies={allCinemas}
+              setListAllMoviesFilter={setDummy}
+              setListAllMovies={setCinemasData}
+              fromToWhere={"Cinema"}
               />
             </FormControl>
-            <CinemaList CinemaInfo={CinemasData2} ChosenCinemaId={ChosenCinemaId} />
+            <CinemaList CinemaInfo={CinemasData} ChosenCinemaId={ChosenCinemaId} />
         </View>
       </NativeBaseProvider>
     )
