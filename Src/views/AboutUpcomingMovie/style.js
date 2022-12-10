@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   plot: {
     paddingTop: 30,
     textAlign: 'center',
-    width: 350,
+    width: 300,
     marginBottom: 30,
   },
   coverButton: {

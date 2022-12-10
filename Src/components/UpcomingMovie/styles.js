@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       textAlign: 'left',
       position: 'absolute',
-      width: 170,
+      width: 150,
       height: 100,
       left: 170,
       top: -180,
