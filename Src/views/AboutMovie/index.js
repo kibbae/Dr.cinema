@@ -29,10 +29,12 @@ const AboutMovie = ({ route, navigation }) => {
         rating = ratings.imdb
     }
 
+    console.log("AboutMovie folder checking genres")
+    console.log(genres)
     if (genres.length > 1) {
-        var theGenra = genres[0].NameEN + "/" + genres[1].NameEN
+        var theGenra = genres[0]['NameEN\t'] + " / " + genres[1]['NameEN\t']
     } else {
-        var theGenra = genres[0].NameEN
+        var theGenra = genres[0]['NameEN\t']
     }
 
     const IfTherIsRating = () => {
@@ -89,7 +91,7 @@ const AboutMovie = ({ route, navigation }) => {
                         <Entypo name="dot-single" size={18} color="white" />
                         <Text style={styl.MovieInfo}>{theGenra}</Text>
                         <Entypo name="dot-single" size={18} color="white" />
-                        <Text style={styl.MovieInfo}>{durationMinutes}</Text>
+                        <Text style={styl.MovieInfo}>{durationMinutes} Min</Text>
                     </View>
                     <View style={styl.infoInRow}>
                     {rating === false ? <Text style={{color: "#F6C700", fontWeight: "bold"}}>Note This Movie Hase No Rating</Text> : <IfTherIsRating /> }

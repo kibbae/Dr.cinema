@@ -33,12 +33,12 @@ const Home = () => {
       
        <FormControl mt="3" >
        <DropDown 
-       ChosenCinemaId={ChosenCinemaId} 
-       setChosenCinemaId={setChosenCinemaId} 
-       CinemasData={CinemasData} 
-       orgAllMovies={allMovies}
-       setListAllMoviesFilter={setListAllMoviesFilter}
-       setListAllMovies={setListAllMovies}
+        ChosenCinemaId={ChosenCinemaId} 
+        setChosenCinemaId={setChosenCinemaId} 
+        CinemasData={CinemasData} 
+        orgAllMovies={allMovies}
+        setListAllMoviesFilter={setListAllMoviesFilter}
+        setListAllMovies={setListAllMovies}
        />
         {/* <Text style={styles.cinematext} >{ChosenCinemaId === 'all' ? CinemasData.map((item) => ' - ' + item.name) : CinemasData.find((item) => item.id === ChosenCinemaId).name}</Text> */}
         </FormControl>

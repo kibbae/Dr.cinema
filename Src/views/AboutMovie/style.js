@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     fontSize: 27,
     fontWeight: 'bold',
     color: 'white',
+    textAlign: 'center',
     paddingTop: 25,
   },
   infoInRow: {
