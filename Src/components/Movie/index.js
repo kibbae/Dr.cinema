@@ -9,6 +9,13 @@ const DisplayAnImage = ({ MovieInfo, ChosenCinemaId }) => {
     //console.log(MovieInfo)
     const { navigate } = useNavigation();
 
+
+    if (MovieInfo.genres.length > 1) {
+        var theGenra = MovieInfo.genres[0]['NameEN\t'] + " / " + MovieInfo.genres[1]['NameEN\t']
+    } else {
+        var theGenra = MovieInfo.genres[0]['NameEN\t']
+    }
+
   return (
     <View style={styl.container}>
     <TouchableOpacity onPress={() => navigate('AboutMovie', {info: MovieInfo, ChosenCinemaId: ChosenCinemaId})}>
@@ -19,8 +26,9 @@ const DisplayAnImage = ({ MovieInfo, ChosenCinemaId }) => {
     {/* The Movie Title and other info */}
         <View>
             <Text style={styl.moviename}>{MovieInfo.title}</Text>
+            <Text style={styl.genres}>{theGenra}</Text>
             <Text style={styl.year}>{MovieInfo.year}</Text>
-            <Text style={styl.genres}>{MovieInfo.genres[0].NameEN}</Text>
+            
         </View>
     </TouchableOpacity>
     </View>
