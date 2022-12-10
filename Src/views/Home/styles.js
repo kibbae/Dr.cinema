@@ -20,14 +20,21 @@ export default StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
     }, 
-    incinema: {
+    inCinemaContainer: {
+        justifyContent: 'center',
+        marginHorizontal: 15,
         backgroundColor: '#263238',
-        color: 'white',
-        fontSize: 30,
-        fontWeight: 'bold',
-        textAlign: 'center',
         marginTop: 10,
-        
+        flexDirection: 'row',
+    },
+    inCinemaStart: {
+        fontSize: 25,
+        color: 'white',
+    },
+    incinema: {
+        color: 'white',
+        fontSize: 25,
+        fontWeight: 'bold',
       },
 });
 

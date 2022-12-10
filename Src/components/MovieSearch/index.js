@@ -23,7 +23,7 @@ const MovieSearch = ({ listAllMovies, setListAllMovies, orgAllMovies }) => {
         <View>
         {/* Search Bar */}
             <View style={styl.sectionStyle}>
-            <MaterialIcons name="search" size={30} color="black" />
+            <MaterialIcons name="search" size={30} color="white" />
         {/* Search Input */}
             <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
                 <TextInput
@@ -31,12 +31,13 @@ const MovieSearch = ({ listAllMovies, setListAllMovies, orgAllMovies }) => {
                 onChangeText={(value) => handleSearch(value)}
                 value={search}
                 placeholder="Search..."
-                placeholderTextColor={'black'}
+                placeholderTextColor={'#D0D0D0'}
+                color={"white"}
                 />
             </TouchableWithoutFeedback>
         {/* Cansel Search */}
             <TouchableOpacity onPress={() => {setSearch(""), setListAllMovies(orgAllMovies)}}>
-                <Feather name="x-circle" size={24} color="black" />
+                <Feather name="x-circle" size={24} color="white" />
             </TouchableOpacity>
             </View>
         </View>
