@@ -140,7 +140,6 @@ async function LoadEverything() {
     //await waitforloading()
     store.dispatch(fetchGenres())
     store.dispatch(fetchUpcoming())
-    console.log("everything is loaded", store.getState())
 }
 
 LoadEverything()
