@@ -23,9 +23,12 @@ const AboutCinema = () => {
 
 
     return(
+      
       <NativeBaseProvider>
+        
         <View safeArea style={styles.container}>
-            <FormControl p={'12'}>
+        <SafeAreaView>
+            <FormControl p={'0'}>
             <DropDown 
               ChosenCinemaId={ChosenCinemaId} 
               setChosenCinemaId={setChosenCinemaId} 
@@ -36,9 +39,12 @@ const AboutCinema = () => {
               fromToWhere={"Cinema"}
               />
             </FormControl>
+            
             <CinemaList CinemaInfo={CinemasData} ChosenCinemaId={ChosenCinemaId} />
+          </SafeAreaView>
         </View>
       </NativeBaseProvider>
+      
     )
 };
 

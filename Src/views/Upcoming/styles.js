@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     },
     screen: {
       marginBottom: 64,
+      height: "100%",
       backgroundColor: '#263238'
     },
     comingsoon: {
