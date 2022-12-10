@@ -11,7 +11,6 @@ const AboutCinema = () => {
   const state = useSelector(state => state)
   const [data, setData] = useState(state)
 
-  console.log("AboutCinema file checking data from data[Cinemas].Data")
   const allCinemas = data["Cinemas"].Data
   
   const [dummy, setDummy] = React.useState(null)

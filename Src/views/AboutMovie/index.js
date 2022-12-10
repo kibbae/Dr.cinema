@@ -22,15 +22,13 @@ const AboutMovie = ({ route, navigation }) => {
 
     if (ratings.imdb === null) {
         var { plot } = route.params.info
-        //console.log(plot)
         rating = false
     } else {
         plot = omdb[0].Plot
         rating = ratings.imdb
     }
 
-    console.log("AboutMovie folder checking genres")
-    console.log(genres)
+
     if (genres.length > 1) {
         var theGenra = genres[0]['NameEN\t'] + " / " + genres[1]['NameEN\t']
     } else {

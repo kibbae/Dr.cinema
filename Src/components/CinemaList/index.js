@@ -23,10 +23,8 @@ const getSelectionFromData = (CinemaData,ChosenCinemaId) => {
   };
 
 const CinemaList = ({ CinemaInfo, ChosenCinemaId }) => {
-    //console.log('CinemaInfo',ChosenCinemaId)
     // if ChosenCinemaId is not "all" then filter the data by cinema id and display only cinema with that id
     const filterdata = getSelectionFromData(CinemaInfo)
-    //console.log('filterd',filterdata)
 
 
     return (
