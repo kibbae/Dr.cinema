@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
       textAlign: 'left',
       position: 'absolute',
       left: 170,
-      bottom: 20,
+      bottom: 10,
 
     },
     year: {
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
       textAlign: 'left',
       position: 'absolute',
       left: 170,
-      bottom: 40,
+      bottom: 50,
 
     },
 
