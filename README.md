@@ -1,8 +1,16 @@
 # Dr.Cinema App
 
+![image](https://user-images.githubusercontent.com/89973046/218499467-c8c2fc06-2879-4acc-afef-dc82702ab16e.png)
+
 ## Introduction
 
 This app allows users to see what movies are currently playing in cinemas across Iceland, and at what time. The app retrieves data from a private API that provides information on all cinemas in Iceland and the movies being played.
+
+## Technical Details
+
+- The app is built using React Native
+- The app is built using the Expo library
+- The app is built using the Redux library
 
 ## Features
 
@@ -12,6 +20,13 @@ This app allows users to see what movies are currently playing in cinemas across
 - An option to filter the list by cinema or movie
 - An option to search by the movie
 - A detailed view of each movie, including a description and the showtimes for each cinema where the movie is playing
+
+## How to launch app
+
+1. cd in file DR.CINEMA
+2. run npm install
+3. run npm start
+4. Have fun
 
 ## How to use the app
 
